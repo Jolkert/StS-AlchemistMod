@@ -37,7 +37,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 	//This is for the in-game mod settings panel.
 	private static final String MOD_NAME = "Alchemist Mod";
 	private static final String AUTHOR = "Jolkert";
-	private static final String DESCRIPTION = "Adds a new potion-based character to the game";
+	private static final String DESCRIPTION = "Adds a new alchemy-based character to the game";
 	
 	// ===============<TEXTURES>=================
  
@@ -220,7 +220,7 @@ public class AlchemistMod implements EditCardsSubscriber,
         return modID;
     }
     private static void pathCheck()
-    {
+	{
         Gson coolG = new Gson();
         InputStream in = AlchemistMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
