@@ -158,7 +158,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 	{
 		logger.info("Start editing characters. " + "Adding " + TheAlchemist.Enums.THE_ALCHEMIST.toString());
 		
-		BaseMod.addCharacter(new TheAlchemist("theAlchemist", TheAlchemist.Enums.THE_ALCHEMIST),
+		BaseMod.addCharacter(new TheAlchemist("the Alchemist", TheAlchemist.Enums.THE_ALCHEMIST),
 				THE_ALCHEMIST_BUTTON, THE_ALCHEMIST_PORTRAIT, TheAlchemist.Enums.THE_ALCHEMIST);
 		receiveEditPotions();
 		
