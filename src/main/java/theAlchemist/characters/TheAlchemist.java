@@ -82,8 +82,9 @@ public class TheAlchemist extends CustomPlayer
 	
 	public TheAlchemist(String name, PlayerClass setClass)
 	{// A lot of this will probably have to change when we add the actual character sprites. It's all placeholder -Jolkert 2020-01-30
-		super(name, setClass, orbTextures, "theAlchemistResources/images/char/alchemistCharacter/orb/vfx.png", null,
-				new SpriterAnimation("theAlchemistResources/images/char/alchemistCharacter/Spriter/theAlchemistAnimation.scml"));
+		super(name, setClass, orbTextures, "theAlchemistResources/images/char/alchemistCharacter/orb/vfx.png",
+				new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F}, null);
+				//new SpriterAnimation("theAlchemistResources/images/char/alchemistCharacter/Spriter/theAlchemistAnimation.scml"));
 		
 		initializeClass(null, THE_ALCHEMIST_SHOULDER_2, THE_ALCHEMIST_SHOULDER_1, THE_ALCHEMIST_CORPSE, getLoadout(), 20, -10, 220, 290,
 				new EnergyManager(ENERGY_PER_TURN));
