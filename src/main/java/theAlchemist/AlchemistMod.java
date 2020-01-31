@@ -47,17 +47,17 @@ public class AlchemistMod implements EditCardsSubscriber,
 	public static final Color ALCHEMIST_PLATINUM = CardHelper.getColor(208, 243, 255);
 	
 	// Card backgrounds
-	private static final String ATTACK_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/bg_attack_alchemist_color.png";
-	private static final String SKILL_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/bg_skill_alchemist_color.png";
-	private static final String POWER_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/bg_power_alchemist_color.png";
+	private static final String ATTACK_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/bg_attack_alchemist_platinum.png";
+	private static final String SKILL_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/bg_skill_alchemist_platinum.png";
+	private static final String POWER_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/bg_power_alchemist_platinum.png";
 	
-	private static final String ENERGY_ORB_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/card_alchemist_color_orb.png";
+	private static final String ENERGY_ORB_ALCHEMIST_PLATINUM = "theAlchemistResources/images/512/card_alchemist_platinum_orb.png";
 	private static final String CARD_ENERGY_ORB = "theAlchemistResources/images/512/card_small_orb.png";
 	
-	private static final String ATTACK_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/bg_attack_alchemist_color.png";
-	private static final String SKILL_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/bg_skill_alchemist_color.png";
-	private static final String POWER_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/bg_power_alchemist_color.png";
-	private static final String ENERGY_ORB_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/card_alchemist_color_orb.png";
+	private static final String ATTACK_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/bg_attack_alchemist_platinum.png";
+	private static final String SKILL_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/bg_skill_alchemist_platinum.png";
+	private static final String POWER_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/bg_power_alchemist_platinum.png";
+	private static final String ENERGY_ORB_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/card_alchemist_platinum_orb.png";
 	
 	// Character assets
 	private static final String THE_ALCHEMIST_BUTTON = "theAlchemistResources/images/charSelect/AlchemistCharacterButton.png";
