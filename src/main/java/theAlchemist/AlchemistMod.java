@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theAlchemist.characters.TheAlchemist;
 import theAlchemist.util.IDCheckDontTouchPls;
 
 import java.io.InputStream;
@@ -53,20 +54,20 @@ public class AlchemistMod implements EditCardsSubscriber,
 	private static final String CARD_ENERGY_ORB = "theAlchemistResources/images/512/card_small_orb.png";
 	
 	private static final String ATTACK_ALCHEMIST_COLOR_PORTRAIT = "theAlchemistResources/images/1024/bg_attack_alchemist_color.png";
-	private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theAlchemistResources/images/1024/bg_skill_alchemist_color.png";
-	private static final String POWER_DEFAULT_GRAY_PORTRAIT = "theAlchemistResources/images/1024/bg_power_alchemist_color.png";
-	private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theAlchemistResources/images/1024/card_alchemist_color_orb.png";
+	private static final String SKILL_ALCHEMIST_COLOR_PORTRAIT = "theAlchemistResources/images/1024/bg_skill_alchemist_color.png";
+	private static final String POWER_ALCHEMIST_COLOR_PORTRAIT = "theAlchemistResources/images/1024/bg_power_alchemist_color.png";
+	private static final String ENERGY_ORB_ALCHEMIST_COLOR_PORTRAIT = "theAlchemistResources/images/1024/card_alchemist_color_orb.png";
 	
 	// Character assets
-	private static final String THE_DEFAULT_BUTTON = "theAlchemistResources/images/charSelect/AlchemistCharacterButton.png";
-	private static final String THE_DEFAULT_PORTRAIT = "theAlchemistResources/images/charSelect/AlchemistCharacterPortraitBG.png";
-	public static final String THE_DEFAULT_SHOULDER_1 = "theAlchemistResources/images/char/alchemistCharacter/shoulder.png";
-	public static final String THE_DEFAULT_SHOULDER_2 = "theAlchemistResources/images/char/alchemistCharacter/shoulder2.png";
-	public static final String THE_DEFAULT_CORPSE = "theAlchemistResources/images/char/alchemistCharacter/corpse.png";
+	private static final String THE_ALCHEMIST_BUTTON = "theAlchemistResources/images/charSelect/AlchemistCharacterButton.png";
+	public static final String THE_ALCHEMIST_PORTRAIT = "theAlchemistResources/images/ui/charSelect/AlchemistCharacterPortraitBG.png";
+	public static final String THE_ALCHEMIST_SHOULDER_1 = "theAlchemistResources/images/char/alchemistCharacter/shoulder.png";
+	public static final String THE_ALCHEMIST_SHOULDER_2 = "theAlchemistResources/images/char/alchemistCharacter/shoulder2.png";
+	public static final String THE_ALCHEMIST_CORPSE = "theAlchemistResources/images/char/alchemistCharacter/corpse.png";
 	
     // Atlas and JSON files for the animations
-    public static final String THE_DEFAULT_SKELETON_ATLAS = "theAlchemistResources/images/char/alchemistCharacter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON = "theAlchemistResources/images/char/alchemistCharacter/skeleton.json";
+    public static final String THE_ALCHEMIST_SKELETON_ATLAS = "theAlchemistResources/images/char/alchemistCharacter/skeleton.atlas";
+    public static final String THE_ALCHEMIST_SKELETON_JSON = "theAlchemistResources/images/char/alchemistCharacter/skeleton.json";
     
 	//Mod Badge
 	public static final String BADGE_IMAGE = "theAlchemistResources/images/Badge.png";
@@ -106,6 +107,11 @@ public class AlchemistMod implements EditCardsSubscriber,
 		return getModID() + "Resources/images/events/" + resourcePath;
 	}
 	
+	public static String makeUiPath(String resourcePath)
+	{
+		return getModID() + "Resources/images/ui/" + resourcePath;
+	}
+	
 	// ===============</MAKE PATHS>===============
 	
 	public AlchemistMod()
@@ -122,7 +128,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		theAlchemistDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
 		try
 		{
-			SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theAlchemistDefaultSettings); // ...right here
+			SpireConfig config = new SpireConfig("alchemistMod", "theAlchemistConfig", theAlchemistDefaultSettings); // ...right here
 			// the "fileName" parameter is the name of the file MTS will create where it will save our setting.
 			config.load(); // Load the setting and set the boolean to equal it
 			enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
@@ -149,6 +155,13 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditCharacters()
 	{
+		logger.info("Start editing characters. " + "Adding " + TheAlchemist.Enums.THE_ALCHEMIST.toString());
+		
+		BaseMod.addCharacter(new TheAlchemist("theAlchemist", TheAlchemist.Enums.THE_ALCHEMIST),
+				THE_ALCHEMIST_BUTTON, THE_ALCHEMIST_PORTRAIT, TheAlchemist.Enums.THE_ALCHEMIST);
+		receiveEditPotions();
+		
+		logger.info("Added " + TheAlchemist.Enums.THE_ALCHEMIST.toString());
 	}
 	
 	@Override
