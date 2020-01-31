@@ -1,7 +1,6 @@
 package theAlchemist.characters;
 
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -26,7 +25,7 @@ import theAlchemist.AlchemistMod;
 import java.util.ArrayList;
 
 import static theAlchemist.AlchemistMod.*;
-import static theAlchemist.characters.TheAlchemist.Enums.COLOR_COLOR;
+import static theAlchemist.characters.TheAlchemist.Enums.COLOR_PLATINUM;
 
 public class TheAlchemist extends CustomPlayer
 {
@@ -37,11 +36,11 @@ public class TheAlchemist extends CustomPlayer
 		@SpireEnum
 		public static AbstractPlayer.PlayerClass THE_ALCHEMIST;
 		
-		@SpireEnum(name = "ALCHEMIST_COLOR_COLOR")
-		public static AbstractCard.CardColor COLOR_COLOR;
+		@SpireEnum(name = "ALCHEMIST_PLATINUM_COLOR")
+		public static AbstractCard.CardColor COLOR_PLATINUM;
 		
-		@SpireEnum(name = "ALCHEMIST_COLOR_COLOR")
-		public static CardLibrary.LibraryType LIBRARY_COLOR; //THIS "COLOR" STAYS AS COLOR I KNOW WHAT I'M DOING
+		@SpireEnum(name = "ALCHEMIST_PLATINUM_COLOR")
+		public static CardLibrary.LibraryType LIBRARY_COLOR;
 	}
 	
 	// ==============<BASE STATS>==============
@@ -151,13 +150,13 @@ public class TheAlchemist extends CustomPlayer
 	@Override
 	public AbstractCard.CardColor getCardColor() // DONE
 	{
-		return COLOR_COLOR;
+		return COLOR_PLATINUM;
 	}
 	
 	@Override
 	public Color getCardRenderColor() // DONE
 	{
-		return ALCHEMIST_COLOR;
+		return ALCHEMIST_PLATINUM;
 	}
 	
 	@Override
@@ -169,7 +168,7 @@ public class TheAlchemist extends CustomPlayer
 	@Override
 	public Color getCardTrailColor() // DONE
 	{
-		return ALCHEMIST_COLOR;
+		return ALCHEMIST_PLATINUM;
 	}
 	
 	@Override
@@ -192,6 +191,8 @@ public class TheAlchemist extends CustomPlayer
 	}
 	
 	@Override
+	
+	
 	public String getCustomModeCharacterButtonSoundKey() // DONE
 	{// Again, it's the beam sound temporarily
 		return "ATTACK_MAGIC_BEAM_SHORT";
@@ -218,7 +219,7 @@ public class TheAlchemist extends CustomPlayer
 	@Override
 	public Color getSlashAttackColor() // DONE
 	{// Text that displays when you are about to attack the heart
-		return ALCHEMIST_COLOR;
+		return ALCHEMIST_PLATINUM;
 	}
 	
 	@Override
