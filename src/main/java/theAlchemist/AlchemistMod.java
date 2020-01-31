@@ -44,7 +44,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 	// ===============<TEXTURES>=================
  
 	// Character Color
-	public static final Color ALCHEMIST_COLOR = CardHelper.getColor(0, 0, 0);
+	public static final Color ALCHEMIST_COLOR = CardHelper.getColor(208, 243, 255);
 	
 	// Card backgrounds
 	private static final String ATTACK_ALCHEMIST_COLOR = "theAlchemistResources/images/512/bg_attack_alchemist_color.png";
