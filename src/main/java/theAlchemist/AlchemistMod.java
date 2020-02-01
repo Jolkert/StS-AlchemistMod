@@ -61,7 +61,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 	private static final String ENERGY_ORB_ALCHEMIST_PLATINUM_PORTRAIT = "theAlchemistResources/images/1024/card_alchemist_platinum_orb.png";
 	
 	// Character assets
-	private static final String THE_ALCHEMIST_BUTTON = "theAlchemistResources/images/charSelect/AlchemistCharacterButton.png";
+	private static final String THE_ALCHEMIST_BUTTON = "theAlchemistResources/images/ui/charSelect/AlchemistCharacterButton.png";
 	public static final String THE_ALCHEMIST_PORTRAIT = "theAlchemistResources/images/ui/charSelect/AlchemistCharacterPortraitBG.png";
 	public static final String THE_ALCHEMIST_SHOULDER_1 = "theAlchemistResources/images/char/alchemistCharacter/shoulder.png";
 	public static final String THE_ALCHEMIST_SHOULDER_2 = "theAlchemistResources/images/char/alchemistCharacter/shoulder2.png";
@@ -122,6 +122,16 @@ public class AlchemistMod implements EditCardsSubscriber,
 		BaseMod.subscribe(this);
 		setModID("theAlchemist");
 		logger.info("Done subscribing");
+		
+		logger.info("Creating color: " + TheAlchemist.Enums.COLOR_PLATINUM.toString());
+		
+		BaseMod.addColor(TheAlchemist.Enums.COLOR_PLATINUM, ALCHEMIST_PLATINUM, ALCHEMIST_PLATINUM, ALCHEMIST_PLATINUM,
+				ALCHEMIST_PLATINUM, ALCHEMIST_PLATINUM, ALCHEMIST_PLATINUM, ALCHEMIST_PLATINUM,
+				ATTACK_ALCHEMIST_PLATINUM, SKILL_ALCHEMIST_PLATINUM, POWER_ALCHEMIST_PLATINUM, ENERGY_ORB_ALCHEMIST_PLATINUM,
+				ATTACK_ALCHEMIST_PLATINUM_PORTRAIT, SKILL_ALCHEMIST_PLATINUM_PORTRAIT, POWER_ALCHEMIST_PLATINUM_PORTRAIT,
+				ENERGY_ORB_ALCHEMIST_PLATINUM_PORTRAIT, CARD_ENERGY_ORB);
+		
+		logger.info("Finished creating color");
 		
 		
 		logger.info("Adding mod settings");
@@ -188,6 +198,10 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditStrings()
 	{
+		
+		for(int i = 0; i < 50; i++)
+			logger.info(makeID(""));
+			
 		logger.info("Beginning string editing for mod: " + getModID());
 		
 		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Character-Strings.json");
