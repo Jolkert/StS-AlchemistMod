@@ -198,10 +198,6 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditStrings()
 	{
-		
-		for(int i = 0; i < 50; i++)
-			logger.info(makeID(""));
-			
 		logger.info("Beginning string editing for mod: " + getModID());
 		
 		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Character-Strings.json");
