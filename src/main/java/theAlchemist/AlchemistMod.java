@@ -1,10 +1,13 @@
 package theAlchemist;
 
 import basemod.BaseMod;
+import basemod.ModLabel;
+import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -15,6 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theAlchemist.characters.TheAlchemist;
 import theAlchemist.util.IDCheckDontTouchPls;
+import theAlchemist.util.TextureLoader;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -179,6 +183,14 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receivePostInitialize()
 	{
+		logger.info("Loading badge image");
+		
+		Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
+		ModPanel settingsPanel = new ModPanel();
+		ModLabel label = new ModLabel("No settings idiot.", 400.0f, 700.0f, settingsPanel, (me) -> {});
+		BaseMod.registerModBadge(badgeTexture, MOD_NAME, AUTHOR, DESCRIPTION, settingsPanel);
+		
+		logger.info("Loaded badge image");
 	}
 	
 	public void receiveEditPotions()
