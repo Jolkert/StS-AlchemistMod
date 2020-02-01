@@ -9,6 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -190,6 +191,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		logger.info("Beginning string editing for mod: " + getModID());
 		
 		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Character-Strings.json");
+		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Card-Strings.json");
 		
 		logger.info("Finished editing strings");
 	}
