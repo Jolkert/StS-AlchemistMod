@@ -3,7 +3,7 @@
 
 	<!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
 	<!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
-	<groupId>arcticgrille</groupId>
+	<groupId>goodboyinc</groupId>
 	<artifactId>AlchemistMod</artifactId>
 	<name>Alchemist Mod</name>
 	<version>0.0.1</version>
@@ -16,7 +16,7 @@
 		<ModTheSpire.version>3.8.0</ModTheSpire.version>
 		<!--
 			MAKE SURE THIS IS SET TO YOUR STEAM INSTALLATION.
-			Yes, that means you Nate. That should be the only thing you have to change tho. You might not even need to change that tbh
+			Yes, that means you. That should be the only thing you have to change tho. You might not even need to change that tbh
 			Also add yourself as an author in src/main/resources/ModTheSpire.json
 		-->
 		<Steam.path>C:\Program Files (x86)\Steam\steamapps</Steam.path>
