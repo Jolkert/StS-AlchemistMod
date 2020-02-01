@@ -39,7 +39,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 	
 	//This is for the in-game mod settings panel.
 	private static final String MOD_NAME = "Alchemist Mod";
-	private static final String AUTHOR = "Jolkert, Aron";
+	private static final String AUTHOR = "Jolkert, Aron, Rad_Catholic_Dad, ";
 	private static final String DESCRIPTION = "Adds a new alchemy-based character to the game";
 	
 	// ===============<TEXTURES>=================
