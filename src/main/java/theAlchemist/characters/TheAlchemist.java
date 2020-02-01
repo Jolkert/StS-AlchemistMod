@@ -104,7 +104,7 @@ public class TheAlchemist extends CustomPlayer
 	
 	@Override
 	public ArrayList<String> getStartingDeck() // DONE
-	{// Until we implement our actual cards, he starts with an ironclad starter deck -Jolkert 2020-30-01
+	{// Until we implement our actual cards, he starts with an ironclad starter deck -Jolkert 2020-01-30
 		ArrayList<String> retVal = new ArrayList<String>();
 		
 		retVal.add("Strike_R");
@@ -161,7 +161,7 @@ public class TheAlchemist extends CustomPlayer
 	
 	@Override
 	public AbstractCard getStartCardForEvent() // DONE
-	{// This card is what the matching game gives you every time. In basegame: red -> bash, green -> neutralize, blue -> zap, purple -> eruption. Gonna have to change this later -Jolkert 2020-30-01
+	{// This card is what the matching game gives you every time. In basegame: red -> bash, green -> neutralize, blue -> zap, purple -> eruption. Gonna have to change this later -Jolkert 2020-01-30
 		return new com.megacrit.cardcrawl.cards.red.ThunderClap();
 	}
 	
@@ -173,7 +173,7 @@ public class TheAlchemist extends CustomPlayer
 	
 	@Override
 	public int getAscensionMaxHPLoss() // DONE
-	{// This is how I leaned this mechanic even exists. We'll leave it 0 for now -Jolkert 2020-30-01
+	{// This is how I leaned this mechanic even exists. We'll leave it 0 for now -Jolkert 2020-01-30
 		return 0;
 	}
 	
@@ -185,7 +185,7 @@ public class TheAlchemist extends CustomPlayer
 	
 	@Override
 	public void doCharSelectScreenSelectEffect() // DONE
-	{// Until we get a better sound effect, we've got the magic beam -Jolkert 2020-30-01
+	{// Until we get a better sound effect, we've got the magic beam -Jolkert 2020-01-30
 		CardCrawlGame.sound.playA("ATTACK_MAGIC_BEAM_SHORT", 1.25f);
 		CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
 	}
@@ -234,7 +234,7 @@ public class TheAlchemist extends CustomPlayer
 	
 	@Override
 	public String getVampireText() // DONE
-	{// This is basically so the vampires can call the character different things (i.e. brother/sister/broken one) depending on character. Idk what we want them to call us -Jolkert 2020-30-01
+	{// This is basically so the vampires can call the character different things (i.e. brother/sister/broken one) depending on character. Idk what we want them to call us -Jolkert 2020-01-30
 		return TEXT[2];
 	}
 }
