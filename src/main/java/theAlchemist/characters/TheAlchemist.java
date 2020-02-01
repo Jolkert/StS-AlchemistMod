@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theAlchemist.AlchemistMod;
+import theAlchemist.relics.CursedAlembic;
 
 import java.util.ArrayList;
 
@@ -126,7 +127,7 @@ public class TheAlchemist extends CustomPlayer
 	{// Until we make the starter relic, we're just gonna start with the potion belt
 		ArrayList<String> retVal = new ArrayList<String>();
 		
-		retVal.add("Potion Belt");
+		retVal.add(CursedAlembic.ID);
 		
 		for(String id : retVal)
 			UnlockTracker.markRelicAsSeen(id);

@@ -14,9 +14,13 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theAlchemist.characters.TheAlchemist;
+import theAlchemist.relics.CursedAlembic;
 import theAlchemist.util.IDCheckDontTouchPls;
 import theAlchemist.util.TextureLoader;
 
@@ -200,6 +204,13 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditRelics()
 	{
+		logger.info("Adding relics");
+		
+		BaseMod.addRelicToCustomPool(new CursedAlembic(), TheAlchemist.Enums.COLOR_PLATINUM);
+		
+		UnlockTracker.markRelicAsSeen(CursedAlembic.ID);
+		
+		logger.info("Relics added");
 	}
 	
 	@Override
@@ -214,6 +225,8 @@ public class AlchemistMod implements EditCardsSubscriber,
 		
 		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Character-Strings.json");
 		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Card-Strings.json");
+		BaseMod.loadCustomStringsFile(UIStrings.class, getModID()+ "Resources/localization/eng/AlchemistMod-UI-Strings.json");
+		BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Relic-Strings.json");
 		
 		logger.info("Finished editing strings");
 	}
