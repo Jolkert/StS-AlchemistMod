@@ -16,7 +16,7 @@ import theAlchemist.characters.TheAlchemist;
 import static theAlchemist.AlchemistMod.makeCardPath;
 
 public class Ignis extends CustomCard
-{// Template for a basic strike card
+{// TODO: Add full description to this card
 	public static final String ID = AlchemistMod.makeID(Ignis.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 

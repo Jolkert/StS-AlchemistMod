@@ -28,5 +28,10 @@
 	{
 		"NAME": "Lead to Gold",
 		"Description": "Remove target's block, gain gold equal to the amount of block removed times !M!"
+	},
+	"theAlchemist:Ignis":
+	{
+		"NAME": "Ignis",
+		"DESCRIPTION": "Deal !D! damage."
 	}
 }
