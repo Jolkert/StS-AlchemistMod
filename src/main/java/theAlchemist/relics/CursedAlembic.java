@@ -44,6 +44,12 @@ public class CursedAlembic extends CustomRelic
 	}
 	
 	@Override
+	public void onEnterRestRoom()
+	{
+		flash();
+	}
+	
+	@Override
 	public String getUpdatedDescription()
 	{
 		return DESCRIPTIONS[0];
