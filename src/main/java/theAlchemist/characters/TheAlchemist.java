@@ -49,7 +49,7 @@ public class TheAlchemist extends CustomPlayer
 	
 	public static final int ENERGY_PER_TURN = 3;
 	public static final int STARTING_HP = 80;
-	public static final int MAX_HP = 80;
+	public static final int MAX_HP = STARTING_HP;
 	public static final int STARTING_GOLD = 99;
 	public static final int CARD_DRAW = 5;
 	public static final int ORB_SLOTS = 0;
@@ -67,24 +67,29 @@ public class TheAlchemist extends CustomPlayer
 	// ==============</STRINGS>==============
 	
 	
-	public static final String[] orbTextures = {
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer1.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer2.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer3.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer4.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer5.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer6.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer1d.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer2d.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer3d.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer4d.png",
-			"theAlchemistResources/images/char/alchemistCharacter/orb/layer5d.png"
+	public static final String[] ORB_TEXTURES = {
+			"theAlchemistResources/images/char/alchemistCharacter/orb/1.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/2.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/3.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/4.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/5.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/border.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/1d.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/2d.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/3d.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/4d.png",
+			"theAlchemistResources/images/char/alchemistCharacter/orb/5d.png"
+	};
+	
+	public static final float[] LAYER_SPEEDS = {
+			0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+			0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
 	};
 	
 	public TheAlchemist(String name, PlayerClass setClass)
 	{// A lot of this will probably have to change when we add the actual character sprites. It's all placeholder -Jolkert 2020-01-30
-		super(name, setClass, orbTextures, "theAlchemistResources/images/char/alchemistCharacter/orb/vfx.png", null,
-				new SpriterAnimation("theAlchemistResources/images/char/alchemistCharacter/Spriter/theAlchemistAnimation.scml") );
+		super(name, setClass, ORB_TEXTURES, "theAlchemistResources/images/char/alchemistCharacter/orb/vfx.png", LAYER_SPEEDS,
+				new SpriterAnimation("theAlchemistResources/images/char/alchemistCharacter/Spriter/theAlchemistAnimation.scml"));
 		
 		initializeClass(null, THE_ALCHEMIST_SHOULDER_2, THE_ALCHEMIST_SHOULDER_1, THE_ALCHEMIST_CORPSE, getLoadout(), 20, -10, 220, 290,
 				new EnergyManager(ENERGY_PER_TURN));
