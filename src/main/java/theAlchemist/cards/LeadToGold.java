@@ -39,8 +39,7 @@ public class LeadToGold extends CustomCard
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
 		baseDamage = DAMAGE;
-		// If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.)
-		// make sure they are tagged so they can function properly - Jolkert 2020-01-31
+
 	}
 	
 	@Override

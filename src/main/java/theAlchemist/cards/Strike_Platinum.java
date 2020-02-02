@@ -38,7 +38,7 @@ public class Strike_Platinum extends CustomCard
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
 		baseDamage = DAMAGE;
-		this.tags.add(BaseModCardTags.BASIC_STRIKE); // If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.) make sure they are tagged so they can function properly - Jolkert 2020-01-31
+		this.tags.add(BaseModCardTags.BASIC_STRIKE);
 		this.tags.add(CardTags.STARTER_STRIKE);
 	}
 	
