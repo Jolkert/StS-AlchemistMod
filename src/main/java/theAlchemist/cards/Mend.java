@@ -39,7 +39,7 @@ public class Mend extends CustomCard
 		
 		baseHeal = HEAL;
 		this.tags.add(BaseModCardTags.BASIC_DEFEND); // Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
-		this.tags.add(CardTags.STARTER_DEFEND); // Check these tags cause there might be something you need
+		this.tags.add(CardTags.HEALING); // Check these tags cause there might be something you need
 	}
 	
 	@Override
