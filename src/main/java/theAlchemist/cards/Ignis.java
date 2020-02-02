@@ -15,31 +15,36 @@ import theAlchemist.characters.TheAlchemist;
 
 import static theAlchemist.AlchemistMod.makeCardPath;
 
-public class Overheal extends CustomCard
+public class Ignis extends CustomCard
 {// Template for a basic strike card
-	public static final String ID = AlchemistMod.makeID(AttackTemplate.class.getSimpleName());
+	public static final String ID = AlchemistMod.makeID(Ignis.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("Overheal.png");
+	public static final String IMG = makeCardPath("Ignis.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+	private static final CardRarity RARITY = CardRarity.COMMON;
 	private static final CardTarget TARGET = CardTarget.ENEMY;
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final CardColor COLOR = TheAlchemist.Enums.COLOR_PLATINUM;
 
-	private static final int COST = 2;
-	private static final int DAMAGE = 6;
+	private static final int COST = 1;
+	private static final int DAMAGE = 8;
 	private static final int UPGRADE_PLUS_DMG = 3; //upgrade
 
-	public Overheal()
+	public Ignis()
 	{
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
 		baseDamage = DAMAGE;
-		this.tags.add(BaseModCardTags.BASIC_STRIKE);
-		this.tags.add(CardTags.STARTER_STRIKE);
+		//this.tags.add(BaseModCardTags.BASIC_STRIKE);
+
+		/* If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.)
+		make sure they are tagged so they can function properly - Jolkert 2020-01-31*/
+		//Don't use tag if its not a strike defend or form - Aron 2020-02-01
+
+		//this.tags.add(CardTags.STARTER_STRIKE);
 	}
 	
 	@Override
