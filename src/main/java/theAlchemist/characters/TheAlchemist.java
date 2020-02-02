@@ -114,15 +114,15 @@ public class TheAlchemist extends CustomPlayer
 	{// Until we implement our actual cards, he starts with an ironclad starter deck -Jolkert 2020-01-30
 		ArrayList<String> retVal = new ArrayList<String>();
 		
-		retVal.add("Strike_Platinum");
-		retVal.add("Strike_Platinum");
-		retVal.add("Strike_Platinum");
-		retVal.add("Strike_Platinum");
-		retVal.add("Strike_Platinum");
-		retVal.add("Mend");
-		retVal.add("Mend");
-		retVal.add("Mend");
-		retVal.add("Mend");
+		retVal.add(Strike_Platinum.ID);
+		retVal.add(Strike_Platinum.ID);
+		retVal.add(Strike_Platinum.ID);
+		retVal.add(Strike_Platinum.ID);
+		retVal.add(Strike_Platinum.ID);
+		retVal.add(Mend.ID);
+		retVal.add(Mend.ID);
+		retVal.add(Mend.ID);
+		retVal.add(Mend.ID);
 		retVal.add("Bash");
 		
 		return retVal;

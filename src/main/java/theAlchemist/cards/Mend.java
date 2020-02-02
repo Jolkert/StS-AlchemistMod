@@ -37,7 +37,7 @@ public class Mend extends CustomCard
 	{
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		baseHeal = HEAL;
+		baseMagicNumber = HEAL;
 		this.tags.add(BaseModCardTags.BASIC_DEFEND); // Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
 		this.tags.add(CardTags.HEALING); // Check these tags cause there might be something you need
 	}
