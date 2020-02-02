@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theAlchemist.AlchemistMod;
+import theAlchemist.actions.LeadToGoldAction;
 import theAlchemist.characters.TheAlchemist;
 
 import static theAlchemist.AlchemistMod.makeCardPath;
@@ -31,22 +32,28 @@ public class LeadToGold extends CustomCard
 	private static final CardColor COLOR = TheAlchemist.Enums.COLOR_PLATINUM;
 
 	private static final int COST = 1;
-	private static final int DAMAGE = 6;
-	private static final int UPGRADE_PLUS_DMG = 3; //upgrade
+	private static final int GOLD_GAIN_MULTIPLIER = 5;
+	private static final int UPGRADE_PLUS_GOLD_GAIN_MULTIPLIER = 2;
 
 	public LeadToGold()
 	{
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
+<<<<<<< HEAD
 		baseDamage = DAMAGE;
 
+=======
+		baseMagicNumber = GOLD_GAIN_MULTIPLIER;
+		// If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.)
+		// make sure they are tagged so they can function properly - Jolkert 2020-01-31
+>>>>>>> 712ac67285120be40890f24b8388204d913c997d
 	}
 	
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
 		AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(monster, player));
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new DamageInfo(player, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+		AbstractDungeon.actionManager.addToBottom(new LeadToGoldAction(monster, new DamageInfo(player, damage, damageTypeForTurn), 7));
 	}
 	
 	@Override
@@ -55,7 +62,7 @@ public class LeadToGold extends CustomCard
 		if(!upgraded)
 		{
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(UPGRADE_PLUS_GOLD_GAIN_MULTIPLIER);
 			initializeDescription();
 		}
 	}
