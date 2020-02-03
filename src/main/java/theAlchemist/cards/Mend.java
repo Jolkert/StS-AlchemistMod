@@ -56,7 +56,7 @@ public class Mend extends CustomCard
 		if (!upgraded)
 		{
 			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_HEAL);
+			upgradeMagicNumber(UPGRADE_PLUS_HEAL);
 			initializeDescription();
 		}
 	}
