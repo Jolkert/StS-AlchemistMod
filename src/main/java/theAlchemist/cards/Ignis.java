@@ -1,7 +1,6 @@
 package theAlchemist.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -20,7 +19,7 @@ public class Ignis extends CustomCard
 	public static final String ID = AlchemistMod.makeID(Ignis.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("Ignis.png");
+	public static final String IMAGE = makeCardPath("Ignis.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -35,16 +34,9 @@ public class Ignis extends CustomCard
 
 	public Ignis()
 	{
-		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
 		baseDamage = DAMAGE;
-		//this.tags.add(BaseModCardTags.BASIC_STRIKE);
-
-		/* If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.)
-		make sure they are tagged so they can function properly - Jolkert 2020-01-31*/
-		//Don't use tag if its not a strike defend or form - Aron 2020-02-01
-
-		//this.tags.add(CardTags.STARTER_STRIKE);
 	}
 	
 	@Override

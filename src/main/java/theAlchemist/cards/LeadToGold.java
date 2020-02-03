@@ -1,12 +1,8 @@
 package theAlchemist.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +18,7 @@ public class LeadToGold extends CustomCard
 	public static final String ID = AlchemistMod.makeID(AttackTemplate.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("LeadToGold");
+	public static final String IMAGE = makeCardPath("LeadToGold");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -37,9 +33,9 @@ public class LeadToGold extends CustomCard
 
 	public LeadToGold()
 	{
-		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		baseMagicNumber = GOLD_GAIN_MULTIPLIER;
+		this.baseMagicNumber = GOLD_GAIN_MULTIPLIER;
 	}
 	
 	@Override
