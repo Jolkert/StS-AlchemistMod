@@ -22,7 +22,8 @@
 	"theAlchemist:Overheal":
 	{
 		"NAME": "Overheal",
-		"DESCRIPTION": "For each point of health healed over your max HP, gain 1 #yRegeneration."
+		"DESCRIPTION": "Whenever you heal for more than your max HP, gain the difference in Regeneration",
+		"UPGRADE_DESCRIPTION": "#yInnate. NL "
 	},
 	"theAlchemist:LeadToGold":
 	{

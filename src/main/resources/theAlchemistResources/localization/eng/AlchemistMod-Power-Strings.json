@@ -1,0 +1,7 @@
+{
+	"theAlchemist:OverhealPower":
+	{
+		"NAME": "Overheal",
+		"DESCRIPTIONS": ["Whenever you heal for more than your max HP, gain the difference in #yRegeneration."]
+	}
+}
