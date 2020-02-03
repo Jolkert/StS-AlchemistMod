@@ -18,7 +18,7 @@ import theAlchemist.characters.TheAlchemist;
 import static theAlchemist.AlchemistMod.makeCardPath;
 
 public class LeadToGold extends CustomCard
-{// Template for a basic strike card
+{
 	public static final String ID = AlchemistMod.makeID(AttackTemplate.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
