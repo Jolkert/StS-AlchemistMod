@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theAlchemist.AlchemistMod;
-import theAlchemist.actions.LeadToGoldAction;
 import theAlchemist.characters.TheAlchemist;
 
 import static theAlchemist.AlchemistMod.makeCardPath;
@@ -39,18 +39,16 @@ public class LeadToGold extends CustomCard
 	{
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		//baseDamage = DAMAGE;
-
 		baseMagicNumber = GOLD_GAIN_MULTIPLIER;
-		// If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.)
-		// make sure they are tagged so they can function properly - Jolkert 2020-01-31
 	}
 	
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
+		int goldToGain = monster.currentBlock * this.magicNumber;
 		AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(monster, player));
-		AbstractDungeon.actionManager.addToBottom(new LeadToGoldAction(monster, new DamageInfo(player, damage, damageTypeForTurn), 7));
+		if(goldToGain > 0)
+			AbstractDungeon.actionManager.addToBottom(new GainGoldAction(goldToGain));
 	}
 	
 	@Override

@@ -28,7 +28,7 @@
 	"theAlchemist:LeadToGold":
 	{
 		"NAME": "Lead to Gold",
-		"Description": "Remove target's block, gain gold equal to the amount of block removed times !M!"
+		"Description": "Remove target's block, and gain Block equal to !M! times removed block."
 	},
 	"theAlchemist:Ignis":
 	{
