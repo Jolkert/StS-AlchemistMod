@@ -37,7 +37,7 @@ public class Mend extends CustomCard
 		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
 		this.baseHeal = HEAL;
-		this.baseMagicNumber = HEAL;
+		this.baseMagicNumber = this.baseHeal;
 		
 		this.tags.add(BaseModCardTags.BASIC_DEFEND);
 		this.tags.add(CardTags.HEALING);
@@ -47,7 +47,7 @@ public class Mend extends CustomCard
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
-		AbstractDungeon.actionManager.addToBottom(new HealAction(player, player, HEAL));
+		AbstractDungeon.actionManager.addToBottom(new HealAction(player, player, this.magicNumber));
 	}
 	
 	@Override
