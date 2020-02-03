@@ -18,7 +18,7 @@ public class LeadToGold extends CustomCard
 	public static final String ID = AlchemistMod.makeID(AttackTemplate.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMAGE = makeCardPath("LeadToGold");
+	public static final String IMAGE = makeCardPath("LeadToGold.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
