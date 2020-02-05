@@ -221,8 +221,13 @@ public class AlchemistMod implements EditCardsSubscriber,
 	{
 		BaseMod.addCard(new Mend());
 		BaseMod.addCard(new Strike_Platinum());
+		BaseMod.addCard(new Brew());
+		
 		BaseMod.addCard(new Overheal());
 		BaseMod.addCard(new LeadToGold());
+		BaseMod.addCard(new Ignis());
+		BaseMod.addCard(new PotionJunky());
+		BaseMod.addCard(new Violation());
 	}
 	
 	@Override
