@@ -48,8 +48,9 @@ public class Ignis extends AbstractElement
 		
 		this.tags.add(AlchemistCardTags.ELEMENT);
 		
+		// these two lines aren't entirely necessary, but we're gonna do them anyways -Jolkert 2020-02-04
 		this.stage = 0;
-		this.constituents = null; // these two lines aren't entirely necessary, but we're gonna do them anyways
+		this.constituents = null;
 		this.reactants = REACTANTS;
 	}
 	
