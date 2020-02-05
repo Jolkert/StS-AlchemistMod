@@ -40,29 +40,30 @@ public class OverhealPower extends AbstractPower
 		this.owner = owner;
 		
 		this.type = PowerType.BUFF;
-		this.isTurnBased = false;
+		
+		this.isPostActionPower = true; // I honestly have no clue what this flag does, but it sounds like it applies to overheal idk - Jolkert 2020-02-05
 		
 		this.region128 = new TextureAtlas.AtlasRegion(TEXTURE_84, 0, 0, 84, 84);
 		this.region48 = new TextureAtlas.AtlasRegion(TEXTURE_32, 0, 0, 32, 32);
 		
-		updateDescription();
+		this.updateDescription();
 		
-		lastTrackedHeal = getLastPlayedHealCard();
+		this.lastTrackedHeal = getLastPlayedHealCard();
 	}
 	
 	@Override
 	public int onHeal(int healAmount)
 	{
-		int regenToAdd = owner.currentHealth + healAmount - owner.maxHealth;
+		int regenToAdd = this.owner.currentHealth + healAmount - this.owner.maxHealth;
 		
 		if(regenToAdd > 0 && lastHealWasCard())
 		{
 			flashWithoutSound();
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new RegenPower(owner, regenToAdd)));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RegenPower(this.owner, regenToAdd)));
 			
 			AbstractCard lastHeal = getLastPlayedHealCard();
 			if(lastHeal != null)
-				lastTrackedHeal = lastHeal;
+				this.lastTrackedHeal = lastHeal;
 		}
 		
 		return healAmount;
@@ -92,6 +93,6 @@ public class OverhealPower extends AbstractPower
 	
 	private boolean lastHealWasCard()
 	{
-		return lastTrackedHeal == getLastPlayedHealCard();
+		return this.lastTrackedHeal == getLastPlayedHealCard();
 	}
 }
