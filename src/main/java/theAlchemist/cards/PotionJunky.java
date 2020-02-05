@@ -10,43 +10,46 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theAlchemist.AlchemistMod;
 import theAlchemist.characters.TheAlchemist;
 
 import static theAlchemist.AlchemistMod.makeCardPath;
 
-public class Ignis extends CustomCard
+public class PotionJunky extends CustomCard
 {// Template for a basic strike card
-	public static final String ID = AlchemistMod.makeID(Ignis.class.getSimpleName());
+	public static final String ID = AlchemistMod.makeID(PotionJunky.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("Ignis.png");
+	public static final String IMG = makeCardPath("PotionJunky.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
-	private static final CardRarity RARITY = CardRarity.COMMON;
+	private static final CardRarity RARITY = CardRarity.RARE;
 	private static final CardTarget TARGET = CardTarget.ENEMY;
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final CardColor COLOR = TheAlchemist.Enums.COLOR_PLATINUM;
 
-	private static final int COST = 1;
-	private static final int DAMAGE = 8;
-	private static final int UPGRADE_PLUS_DMG = 3; //upgrade
+	private static final int COST = 3;
 
-	public Ignis()
+	public PotionJunky()
 	{
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-		
-		baseDamage = DAMAGE;
-		//this.tags.add(BaseModCardTags.BASIC_STRIKE);
 
-		//this.tags.add(CardTags.STARTER_STRIKE);
 	}
 	
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new DamageInfo(player, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+		AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new DamageInfo(player, getBuffs(), damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+		if(upgraded)
+		{
+			for(AbstractPower power: AbstractDungeon.player.powers)
+			{
+				if(power.type == AbstractPower.PowerType.BUFF)
+					power.stackPower(1);
+			}
+		}
 	}
 	
 	@Override
@@ -55,8 +58,18 @@ public class Ignis extends CustomCard
 		if(!upgraded)
 		{
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
 			initializeDescription();
 		}
+	}
+
+	private int getBuffs()
+	{
+		int buffs = 0;
+		for(AbstractPower power: AbstractDungeon.player.powers)
+		{
+			if(power.type == AbstractPower.PowerType.BUFF)
+				buffs+=power.amount;
+		}
+		return buffs;
 	}
 }
