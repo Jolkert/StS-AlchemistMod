@@ -13,9 +13,7 @@ import com.megacrit.cardcrawl.powers.RegenPower;
 import theAlchemist.AlchemistMod;
 import theAlchemist.util.TextureLoader;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Stack;
 
 import static theAlchemist.AlchemistMod.*;
 
@@ -28,7 +26,7 @@ public class OverhealPower extends AbstractPower
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	private Stack<AbstractCard> cardsTriggered;
+	private AbstractCard lastTrackedHeal;
 	
 	//IMAGES
 	private static final Texture TEXTURE_84 = TextureLoader.getTexture(makePowerPath("84/overheal_power.png"));
@@ -49,14 +47,13 @@ public class OverhealPower extends AbstractPower
 		
 		updateDescription();
 		
-		cardsTriggered = new Stack<AbstractCard>();
-		cardsTriggered.push(getLastPlayedHealCard());
+		lastTrackedHeal = getLastPlayedHealCard();
 	}
 	
 	@Override
-	public int onHeal(int amountHealed)
+	public int onHeal(int healAmount)
 	{
-		int regenToAdd = owner.currentHealth + amountHealed - owner.maxHealth;
+		int regenToAdd = owner.currentHealth + healAmount - owner.maxHealth;
 		
 		if(regenToAdd > 0 && lastHealWasCard())
 		{
@@ -65,10 +62,10 @@ public class OverhealPower extends AbstractPower
 			
 			AbstractCard lastHeal = getLastPlayedHealCard();
 			if(lastHeal != null)
-				cardsTriggered.push(lastHeal);
+				lastTrackedHeal = lastHeal;
 		}
 		
-		return amountHealed;
+		return healAmount;
 		
 	}
 	
@@ -78,7 +75,7 @@ public class OverhealPower extends AbstractPower
 		this.description = DESCRIPTIONS[0];
 	}
 	
-	public AbstractCard getLastPlayedHealCard()
+	private AbstractCard getLastPlayedHealCard()
 	{
 		ArrayList<AbstractCard> cardsThisCombat = AbstractDungeon.actionManager.cardsPlayedThisCombat;
 		
@@ -93,14 +90,8 @@ public class OverhealPower extends AbstractPower
 		return lastPlayedHeal;
 	}
 	
-	public boolean lastHealWasCard()
+	private boolean lastHealWasCard()
 	{
-		AbstractCard lastPlayedHeal = getLastPlayedHealCard();
-		return cardsTriggered.peek() != lastPlayedHeal;
-	}
-	
-	public AbstractPower makeCopy()
-	{
-		return new OverhealPower(owner);
+		return lastTrackedHeal == getLastPlayedHealCard();
 	}
 }
