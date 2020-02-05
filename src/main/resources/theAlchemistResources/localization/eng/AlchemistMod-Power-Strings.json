@@ -3,5 +3,16 @@
 	{
 		"NAME": "Overheal",
 		"DESCRIPTIONS": ["Whenever you heal for more than your max HP, gain the difference in #yRegeneration."]
+	},
+	"theAlchemist:VitalityPower":
+	{
+		"NAME": "Vitality",
+		"DESCRIPTION":
+		[
+			"Increases ",
+			"Decreases ",
+			"#yHealing done by cards by #b",
+			"."
+		]
 	}
 }
