@@ -22,16 +22,37 @@
 	"theAlchemist:Overheal":
 	{
 		"NAME": "Overheal",
-		"DESCRIPTION": "For each point of health healed over your max HP, gain 1 #yRegeneration."
+		"DESCRIPTION": "Whenever you heal for more than your max HP, gain the difference in Regeneration",
+		"UPGRADE_DESCRIPTION": "#yInnate. NL "
 	},
 	"theAlchemist:LeadToGold":
 	{
 		"NAME": "Lead to Gold",
+
 		"Description": "Remove target's block, gain gold equal to the amount of block removed times !M!"
 	},
 	"theAlchemist:Brew":
 	{
 		"NAME": "Brew",
-		"DESCRIPTION": "Brew !M! Potion."
+		"DESCRIPTION": "Brew a Potion.",
+		"UPGRADE_DESCRIPTION": "Brew !M! Potions."
+	},
+	"theAlchemist:Ignis":
+	{
+		"NAME": "Ignis",
+		"DESCRIPTION": "Deal !D! damage."
+
+	},
+	"theAlchemist:PotionJunky":
+	{
+		"NAME": "Potion Junky",
+		"DESCRIPTION": "Deal Damage equivalent to the amount of buffs you currently have.",
+		"UPGRADE_DESCRIPTION": "NL Increase all buffs by 1 stage."
+	},
+	"theAlchemist:Violation":
+	{
+		"NAME": "Violation",
+		"DESCRIPTION": "Draw a card from you exhaust pile. Deal 4 damage to self.",
+		"UPGRADE_DESCRIPTION": "Draw 2 cards from you exhaust pile. Deal 4 damage to self."
 	}
 }

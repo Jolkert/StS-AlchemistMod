@@ -24,6 +24,7 @@ public class PotionJunky extends CustomCard
 	public static final String IMG = makeCardPath("PotionJunky.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 	private static final CardRarity RARITY = CardRarity.RARE;
 	private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -35,7 +36,6 @@ public class PotionJunky extends CustomCard
 	public PotionJunky()
 	{
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-
 	}
 	
 	@Override
@@ -58,6 +58,7 @@ public class PotionJunky extends CustomCard
 		if(!upgraded)
 		{
 			upgradeName();
+			rawDescription = DESCRIPTION + UPGRADE_DESCRIPTION;
 			initializeDescription();
 		}
 	}

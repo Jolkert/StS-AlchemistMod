@@ -20,7 +20,7 @@ public class AttackTemplate extends CustomCard
 	public static final String ID = AlchemistMod.makeID(AttackTemplate.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	
-	public static final String IMG = makeCardPath("AttackTemplate.png");
+	public static final String IMAGE = makeCardPath("AttackTemplate.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	
@@ -35,14 +35,13 @@ public class AttackTemplate extends CustomCard
 	
 	public AttackTemplate()
 	{
-		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		baseDamage = DAMAGE;
-		this.tags.add(BaseModCardTags.BASIC_STRIKE);
-		/* If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.)
-		make sure they are tagged so they can function properly - Jolkert 2020-01-31*/
-		//Don't use tag if its not a strike defend or form - Aron 2020-02-01
-		this.tags.add(CardTags.STARTER_STRIKE);
+		this.baseDamage = DAMAGE;
+		
+		this.tags.add(BaseModCardTags.BASIC_STRIKE); // If a strike, defend, or form card (like Wraith form, Demon form, Echo form, etc.) make sure they are tagged so they can function properly - Jolkert 2020-01-31
+		this.tags.add(CardTags.STARTER_STRIKE); // Don't use tag if its not a strike defend or form - Aron 2020-02-01
+												// Also if it's a heal, please tag it with CardTags.HEALING -Jolkert 2020-02-02
 	}
 	
 	@Override

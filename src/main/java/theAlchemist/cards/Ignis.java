@@ -1,7 +1,6 @@
 package theAlchemist.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -16,11 +15,11 @@ import theAlchemist.characters.TheAlchemist;
 import static theAlchemist.AlchemistMod.makeCardPath;
 
 public class Ignis extends CustomCard
-{// Template for a basic strike card
+{// TODO: Add full description to this card
 	public static final String ID = AlchemistMod.makeID(Ignis.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("Ignis.png");
+	public static final String IMAGE = makeCardPath("Ignis.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -35,12 +34,15 @@ public class Ignis extends CustomCard
 
 	public Ignis()
 	{
-		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
 		baseDamage = DAMAGE;
+
 		//this.tags.add(BaseModCardTags.BASIC_STRIKE);
 
 		//this.tags.add(CardTags.STARTER_STRIKE);
+
+
 	}
 	
 	@Override

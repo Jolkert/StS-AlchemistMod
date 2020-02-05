@@ -192,8 +192,8 @@ public class TheAlchemist extends CustomPlayer
 	
 	@Override
 	public void doCharSelectScreenSelectEffect() // DONE
-	{// Until we get a better sound effect, we've got the magic beam -Jolkert 2020-01-30
-		CardCrawlGame.sound.playA("ATTACK_MAGIC_BEAM_SHORT", 1.25f);
+	{// I've changed this to the potion sound effect for now -Jolkert 2020-01-30
+		CardCrawlGame.sound.playA("POTION_1", 1.0f);
 		CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
 	}
 	

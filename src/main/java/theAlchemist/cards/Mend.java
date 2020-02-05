@@ -2,7 +2,6 @@ package theAlchemist.cards;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,7 +18,7 @@ public class Mend extends CustomCard
 	public static final String ID = AlchemistMod.makeID(Mend.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("Mend.png");
+	public static final String IMAGE = makeCardPath("Mend.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -35,20 +34,20 @@ public class Mend extends CustomCard
 
 	public Mend()
 	{
-		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		baseHeal = HEAL;
+		this.baseHeal = HEAL;
+		this.baseMagicNumber = this.baseHeal;
+		
 		this.tags.add(BaseModCardTags.BASIC_DEFEND);
 		this.tags.add(CardTags.HEALING);
-		baseMagicNumber = HEAL;
-		this.tags.add(BaseModCardTags.BASIC_DEFEND);
-		this.tags.add(CardTags.HEALING);
+		
 	}
 	
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
-		AbstractDungeon.actionManager.addToBottom(new HealAction(player, player, HEAL));
+		AbstractDungeon.actionManager.addToBottom(new HealAction(player, player, this.magicNumber));
 	}
 	
 	@Override
@@ -57,7 +56,7 @@ public class Mend extends CustomCard
 		if (!upgraded)
 		{
 			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_HEAL);
+			upgradeMagicNumber(UPGRADE_PLUS_HEAL);
 			initializeDescription();
 		}
 	}

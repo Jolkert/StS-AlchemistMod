@@ -23,6 +23,7 @@ public class Violation extends CustomCard
 	public static final String IMG = makeCardPath("Violation.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.DESCRIPTION;
 
 	private static final CardRarity RARITY = CardRarity.UNCOMMON;
 	private static final CardTarget TARGET = CardTarget.SELF;
@@ -56,6 +57,7 @@ public class Violation extends CustomCard
 		{
 			upgradeName();
 			upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+			rawDescription = UPGRADE_DESCRIPTION;
 			initializeDescription();
 		}
 	}

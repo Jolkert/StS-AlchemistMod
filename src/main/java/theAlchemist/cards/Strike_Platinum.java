@@ -20,7 +20,7 @@ public class Strike_Platinum extends CustomCard
 	public static final String ID = AlchemistMod.makeID(Strike_Platinum.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-	public static final String IMG = makeCardPath("StrikePlatinum.png");
+	public static final String IMAGE = makeCardPath("StrikePlatinum.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -35,9 +35,10 @@ public class Strike_Platinum extends CustomCard
 
 	public Strike_Platinum()
 	{
-		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		
-		baseDamage = DAMAGE;
+		this.baseDamage = DAMAGE;
+		
 		this.tags.add(BaseModCardTags.BASIC_STRIKE);
 		this.tags.add(CardTags.STARTER_STRIKE);
 	}
