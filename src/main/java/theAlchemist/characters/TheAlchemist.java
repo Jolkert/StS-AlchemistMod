@@ -123,7 +123,7 @@ public class TheAlchemist extends CustomPlayer
 		retVal.add(Mend.ID);
 		retVal.add(Mend.ID);
 		retVal.add(Mend.ID);
-		retVal.add("Bash");
+		retVal.add(Brew.ID);
 		
 		return retVal;
 	}
