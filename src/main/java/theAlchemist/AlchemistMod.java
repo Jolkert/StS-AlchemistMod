@@ -3,6 +3,7 @@ package theAlchemist;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
+import basemod.abstracts.CustomCard;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -11,6 +12,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -29,6 +31,7 @@ import theAlchemist.cards.*;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Properties;
 
 
@@ -219,15 +222,12 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditCards()
 	{
-		BaseMod.addCard(new Mend());
-		BaseMod.addCard(new Strike_Platinum());
-		BaseMod.addCard(new Brew());
-		
-		BaseMod.addCard(new Overheal());
-		BaseMod.addCard(new LeadToGold());
-		BaseMod.addCard(new Ignis());
-		BaseMod.addCard(new PotionJunky());
-		BaseMod.addCard(new Violation());
+		ArrayList<AbstractCard> cardsToAdd = generateCardsToAdd();
+		for(AbstractCard card : cardsToAdd)
+		{
+			BaseMod.addCard(card);
+			UnlockTracker.unlockCard(card.cardID);
+		}
 	}
 	
 	@Override
@@ -249,7 +249,22 @@ public class AlchemistMod implements EditCardsSubscriber,
 	}
 	
 	
-	
+	private ArrayList<AbstractCard> generateCardsToAdd()
+	{
+		ArrayList<AbstractCard> retVal = new ArrayList<AbstractCard>();
+		
+		retVal.add(new Mend());
+		retVal.add(new Strike_Platinum());
+		retVal.add(new Brew());
+		
+		retVal.add(new Overheal());
+		retVal.add(new LeadToGold());
+		retVal.add(new Ignis());
+		retVal.add(new PotionJunky());
+		retVal.add(new Violation());
+		
+		return retVal;
+	}
     
     
 	
