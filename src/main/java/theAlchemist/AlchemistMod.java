@@ -14,10 +14,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -235,10 +232,11 @@ public class AlchemistMod implements EditCardsSubscriber,
 	{
 		logger.info("Beginning string editing for mod: " + getModID());
 		
-		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Character-Strings.json");
-		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Card-Strings.json");
-		BaseMod.loadCustomStringsFile(UIStrings.class, getModID()+ "Resources/localization/eng/AlchemistMod-UI-Strings.json");
-		BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/AlchemistMod-Relic-Strings.json");
+		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() +  "Resources/localization/eng/AlchemistMod-Character-Strings.json");
+		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + 		"Resources/localization/eng/AlchemistMod-Card-Strings.json");
+		BaseMod.loadCustomStringsFile(UIStrings.class, getModID()+ 			"Resources/localization/eng/AlchemistMod-UI-Strings.json");
+		BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() +	    "Resources/localization/eng/AlchemistMod-Relic-Strings.json");
+		BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + 		"Resources/localization/eng/AlchemistMod-Power-Strings.json");
 		
 		logger.info("Finished editing strings");
 	}
@@ -260,6 +258,13 @@ public class AlchemistMod implements EditCardsSubscriber,
 		retVal.add(new Overheal());
 		retVal.add(new LeadToGold());
 		retVal.add(new Ignis());
+		retVal.add(new Aer());
+		retVal.add(new Terra());
+		retVal.add(new Aqua());
+		retVal.add(new Fulgur());
+		retVal.add(new Glacies());
+		retVal.add(new Naturae());
+		retVal.add(new Tremor());
 		retVal.add(new PotionJunky());
 		retVal.add(new Violation());
 		

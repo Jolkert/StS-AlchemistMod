@@ -15,7 +15,7 @@ import static theAlchemist.AlchemistMod.makeCardPath;
 
 public class LeadToGold extends CustomCard
 {
-	public static final String ID = AlchemistMod.makeID(AttackTemplate.class.getSimpleName());
+	public static final String ID = AlchemistMod.makeID(LeadToGold.class.getSimpleName());
 	public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
 	public static final String IMAGE = makeCardPath("LeadToGold.png");
@@ -24,7 +24,7 @@ public class LeadToGold extends CustomCard
 
 	private static final CardRarity RARITY = CardRarity.UNCOMMON;
 	private static final CardTarget TARGET = CardTarget.ENEMY;
-	private static final CardType TYPE = CardType.ATTACK;
+	private static final CardType TYPE = CardType.SKILL;
 	private static final CardColor COLOR = TheAlchemist.Enums.COLOR_PLATINUM;
 
 	private static final int COST = 1;

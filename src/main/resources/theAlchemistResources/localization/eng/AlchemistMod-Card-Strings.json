@@ -23,13 +23,12 @@
 	{
 		"NAME": "Overheal",
 		"DESCRIPTION": "Whenever you heal for more than your max HP, gain the difference in Regeneration",
-		"UPGRADE_DESCRIPTION": "#yInnate. NL "
+		"UPGRADE_DESCRIPTION": "Innate. NL "
 	},
 	"theAlchemist:LeadToGold":
 	{
 		"NAME": "Lead to Gold",
-
-		"Description": "Remove target's block, gain gold equal to the amount of block removed times !M!"
+		"DESCRIPTION": "Remove target's block, gain gold equal to the amount of block removed times !M!"
 	},
 	"theAlchemist:Brew":
 	{
@@ -40,8 +39,43 @@
 	"theAlchemist:Ignis":
 	{
 		"NAME": "Ignis",
-		"DESCRIPTION": "Deal !D! damage."
+		"DESCRIPTION": "Deal !D! damage. NL Exhaust."
 
+	},
+	"theAlchemist:Aer":
+	{
+		"NAME": "Aer",
+		"DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was an Element, gain [E] . NL Exhaust."
+	},
+	"theAlchemist:Terra":
+	{
+		"NAME": "Terra",
+		"DESCRIPTION": "Gain !B! Block. NL Exhaust."
+	},
+	"theAlchemist:Aqua":
+	{
+		"NAME": "Aqua",
+		"DESCRIPTION": "Heal !M! Health and gain 2 Regeneration. NL Exhaust."
+	},
+	"theAlchemist:Glacies":
+	{
+		"NAME": "Glacies",
+		"DESCRIPTION": "Gain !B! Block and !M! Dexterity. NL Exhaust."
+	},
+	"theAlchemist:Fulgur":
+	{
+		"NAME": "Fulgur",
+		"DESCRIPTION": "Deal !D! Damage to all enemies"
+	},
+	"theAlchemist:Natruae":
+	{
+		"NAME": "Naturae",
+		"DESCRIPTION": "Heal !M! Health and gain 3 Vitality",
+	},
+	"theAlchemist:Tremor":
+	{
+		"NAME": "Tremor",
+		"DESCRIPTION": "Deal !D! Damage and apply 2 Vulnerable to ALL enemies."
 	},
 	"theAlchemist:PotionJunky":
 	{
@@ -52,7 +86,7 @@
 	"theAlchemist:Violation":
 	{
 		"NAME": "Violation",
-		"DESCRIPTION": "Draw a card from you exhaust pile. Deal 4 damage to self.",
-		"UPGRADE_DESCRIPTION": "Draw 2 cards from you exhaust pile. Deal 4 damage to self."
+		"DESCRIPTION": "Draw a card from your Exhaust pile. Deal 4 damage to self.",
+		"UPGRADE_DESCRIPTION": "Draw 2 cards from your Exhaust pile. Deal 4 damage to self."
 	}
 }
