@@ -53,7 +53,7 @@ public class Tremor extends AbstractElement
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
-		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, player, new VulnerablePower(monster, VULNERABLE, false), VULNERABLE));
 		super.use(player, monster); // Don't change these parts if you're copy-pasting this for a new element pls thx -Jolkert 2020-02-06
 	}

@@ -51,7 +51,7 @@ public class Fulgur extends AbstractElement
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
-		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.LIGHTNING));
+		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.LIGHTNING));
 		super.use(player, monster); // Don't change this part if you're copy-pasting this for a new element pls thx -Jolkert 2020-02-06
 	}
 	
