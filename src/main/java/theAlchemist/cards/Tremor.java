@@ -25,7 +25,7 @@ public class Tremor extends AbstractElement
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	
-	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+	private static final CardRarity RARITY = CardRarity.SPECIAL;
 	private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final CardColor COLOR = CardColor.COLORLESS;

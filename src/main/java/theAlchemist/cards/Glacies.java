@@ -24,7 +24,7 @@ public class Glacies extends AbstractElement
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	
-	private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
+	private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.SPECIAL;
 	private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
 	private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
 	private static final AbstractCard.CardColor COLOR = CardColor.COLORLESS;
