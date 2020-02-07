@@ -3,17 +3,17 @@ package theAlchemist;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
-import basemod.abstracts.CustomCard;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -233,11 +233,11 @@ public class AlchemistMod implements EditCardsSubscriber,
 	{
 		logger.info("Beginning string editing for mod: " + getModID());
 		
-		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() +  "Resources/localization/eng/AlchemistMod-Character-Strings.json");
-		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + 		"Resources/localization/eng/AlchemistMod-Card-Strings.json");
-		BaseMod.loadCustomStringsFile(UIStrings.class, getModID()+ 			"Resources/localization/eng/AlchemistMod-UI-Strings.json");
-		BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() +	    "Resources/localization/eng/AlchemistMod-Relic-Strings.json");
-		BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + 		"Resources/localization/eng/AlchemistMod-Power-Strings.json");
+		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Character-Strings.json");
+		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Card-Strings.json");
+		BaseMod.loadCustomStringsFile(UIStrings.class, getModID()+ "Resources/localization/" + getLang() + "/AlchemistMod-UI-Strings.json");
+		BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Relic-Strings.json");
+		BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Power-Strings.json");
 		
 		logger.info("Finished editing strings");
 	}
@@ -245,10 +245,17 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditKeywords()
 	{
-		BaseMod.addKeyword(new String[]{"basic_element"},"Can be combined with other basic elements.");
-		BaseMod.addKeyword(new String[]{"stage_1_element"}, "Can be combined with other Stage 1 Elements. Breaks down into its component basic elements on use.");
-		BaseMod.addKeyword(new String[]{"stage_2_element"}, "Breaks down into its component basic elements on use.");
-		BaseMod.addKeyword(new String[]{"Vitality"}, "Increases healing done by cards.");
+		Gson gson = new Gson();
+		String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLang() + "/DefaultMod-Keyword-Strings.json").readString(
+				String.valueOf(StandardCharsets.UTF_8));
+		Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+		
+		if (keywords != null)
+			for (Keyword keyword : keywords)
+			{
+				logger.info("Loading keyword : " + keyword.NAMES[0]);
+				BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
+			}
 	}
 	
 	
@@ -276,7 +283,14 @@ public class AlchemistMod implements EditCardsSubscriber,
 		return retVal;
 	}
     
-    
+    private String getLang()
+	{
+		switch(Settings.language)
+		{
+			case ENG:
+			default: return "eng";
+		}
+	}
 	
 	
 	
