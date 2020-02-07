@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -244,6 +245,10 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditKeywords()
 	{
+		BaseMod.addKeyword(new String[]{"basic_element"},"Can be combined with other basic elements.");
+		BaseMod.addKeyword(new String[]{"stage_1_element"}, "Can be combined with other Stage 1 Elements. Breaks down into its component basic elements on use.");
+		BaseMod.addKeyword(new String[]{"stage_2_element"}, "Breaks down into its component basic elements on use.");
+		BaseMod.addKeyword(new String[]{"Vitality"}, "Increases healing done by cards.");
 	}
 	
 	
