@@ -94,5 +94,15 @@
 		"NAME": "Spillage",
 		"DESCRIPTION": "Whenever you gain a potion, use its ability",
 		"UPGRADE_DESCRIPTION": "Whenever you gain a potion, use its ability"
+	},
+	"theAlchemist:BeakerBash":
+	{
+		"NAME": "Beaker Bash",
+		"DESCRIPTION": "Deal !D! damage and add a Broken Beaker into your hand."
+	},
+	"theAlchemist:BrokenBeaker":
+	{
+		"NAME": "Broken Beaker",
+		"DESCRIPTION": "Deal !D! damage. NL Exhaust."
 	}
 }
