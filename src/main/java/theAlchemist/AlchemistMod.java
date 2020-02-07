@@ -128,6 +128,9 @@ public class AlchemistMod implements EditCardsSubscriber,
 	
 	// ===============</MAKE PATHS>===============
 	
+	
+	// ===============<INITIALIZATION>===============
+	
 	public AlchemistMod()
 	{
 		logger.info("Subscribe to BaseMod hooks");
@@ -165,8 +168,6 @@ public class AlchemistMod implements EditCardsSubscriber,
 		
 	}
 	
-
-	
 	
 	@SuppressWarnings("unused")
 	public static void initialize()
@@ -179,13 +180,14 @@ public class AlchemistMod implements EditCardsSubscriber,
 	@Override
 	public void receiveEditCharacters()
 	{
-		logger.info("Start editing characters. " + "Adding " + TheAlchemist.Enums.THE_ALCHEMIST.toString());
+		logger.info("Adding characters from "+ getModID() + "...\nAdding " + TheAlchemist.Enums.THE_ALCHEMIST.toString() + "...");
 		
 		BaseMod.addCharacter(new TheAlchemist("the Alchemist", TheAlchemist.Enums.THE_ALCHEMIST),
 				THE_ALCHEMIST_BUTTON, THE_ALCHEMIST_PORTRAIT, TheAlchemist.Enums.THE_ALCHEMIST);
 		receiveEditPotions();
 		
-		logger.info("Added " + TheAlchemist.Enums.THE_ALCHEMIST.toString());
+		logger.info("Added " + TheAlchemist.Enums.THE_ALCHEMIST.toString() + "!");
+		logger.info("Characters added!");
 	}
 	
 	@Override
@@ -203,35 +205,42 @@ public class AlchemistMod implements EditCardsSubscriber,
 	
 	public void receiveEditPotions()
 	{
+		logger.info("Adding potions from " + getModID() + "...");
+		
+		logger.info("Potions added!");
 	}
 	
 	@Override
 	public void receiveEditRelics()
 	{
-		logger.info("Adding relics");
+		logger.info("Adding relics from" + getModID() + "...");
 		
 		BaseMod.addRelicToCustomPool(new CursedAlembic(), TheAlchemist.Enums.COLOR_PLATINUM);
 		
 		UnlockTracker.markRelicAsSeen(CursedAlembic.ID);
 		
-		logger.info("Relics added");
+		logger.info("Relics added!");
 	}
 	
 	@Override
 	public void receiveEditCards()
 	{
+		logger.info("Adding cards from " + getModID() + "...");
+		
 		ArrayList<AbstractCard> cardsToAdd = generateCardsToAdd();
 		for(AbstractCard card : cardsToAdd)
 		{
 			BaseMod.addCard(card);
 			UnlockTracker.unlockCard(card.cardID);
 		}
+		
+		logger.info("Cards added!");
 	}
 	
 	@Override
 	public void receiveEditStrings()
 	{
-		logger.info("Beginning string editing for mod: " + getModID());
+		logger.info("Editing strings for " + getModID() + "...");
 		
 		BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Character-Strings.json");
 		BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Card-Strings.json");
@@ -239,14 +248,16 @@ public class AlchemistMod implements EditCardsSubscriber,
 		BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Relic-Strings.json");
 		BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Power-Strings.json");
 		
-		logger.info("Finished editing strings");
+		logger.info("Strings edited!");
 	}
 	
 	@Override
 	public void receiveEditKeywords()
 	{
+		logger.info("Loading keywords for " + getModID() + "...");
+		
 		Gson gson = new Gson();
-		String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLang() + "/DefaultMod-Keyword-Strings.json").readString(
+		String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLang() + "/AlchemistMod-Keyword-Strings.json").readString(
 				String.valueOf(StandardCharsets.UTF_8));
 		Keyword[] keywords = gson.fromJson(json, Keyword[].class);
 		
@@ -256,6 +267,8 @@ public class AlchemistMod implements EditCardsSubscriber,
 				logger.info("Loading keyword : " + keyword.NAMES[0]);
 				BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
 			}
+		
+		logger.info("Keywords loaded!");
 	}
 	
 	
@@ -292,6 +305,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		}
 	}
 	
+	// ===============</INITIALIZATION>===============
 	
 	
 	
