@@ -69,7 +69,7 @@ public class PotionJunky extends CustomCard
 		for(AbstractPower power: AbstractDungeon.player.powers)
 		{
 			if(power.type == AbstractPower.PowerType.BUFF)
-				buffs+=power.amount;
+				buffs += power.amount > 0 ? power.amount : 1;
 		}
 		return buffs;
 	}
