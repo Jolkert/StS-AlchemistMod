@@ -1,16 +1,16 @@
 package theAlchemist.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
 import theAlchemist.AlchemistMod;
 import theAlchemist.characters.TheAlchemist;
+import theAlchemist.powers.SpillagePower;
 
 import static theAlchemist.AlchemistMod.makeCardPath;
 
@@ -44,7 +44,12 @@ public class Brew extends CustomCard
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
 		for(int i = 0; i < this.baseMagicNumber; i++)
-			AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
+		{
+			AbstractPotion potionToAdd = AbstractDungeon.returnRandomPotion(true);
+			AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(potionToAdd));
+			if(player.hasPower(SpillagePower.POWER_ID))
+				potionToAdd.makeCopy().use(monster); // This might break but hopefully not -Jolkert 2020-02-07
+		}
 	}
 	
 	@Override

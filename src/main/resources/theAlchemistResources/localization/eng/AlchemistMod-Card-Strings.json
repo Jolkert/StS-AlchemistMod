@@ -88,5 +88,11 @@
 		"NAME": "Violation",
 		"DESCRIPTION": "Draw a card from your Exhaust pile. Deal 4 damage to self.",
 		"UPGRADE_DESCRIPTION": "Draw 2 cards from your Exhaust pile. Deal 4 damage to self."
+	},
+	"theAlchemist:Spillage":
+	{
+		"NAME": "Spillage",
+		"DESCRIPTION": "Whenever you gain a potion, use its ability",
+		"UPGRADE_DESCRIPTION": "Whenever you gain a potion, use its ability"
 	}
 }

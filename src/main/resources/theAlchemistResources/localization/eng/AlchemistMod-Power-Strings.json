@@ -22,5 +22,13 @@
 		[
 			"This is a temporary description YEEHAW."
 		]
+	},
+	"theAlchemist:SpillagePower":
+	{
+		"NAME": "Spillage",
+		"DESCRIPTIONS":
+		[
+			"Whenever you gain a potion, use its ability"
+		]
 	}
 }

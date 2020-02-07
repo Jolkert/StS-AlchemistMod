@@ -292,6 +292,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		retVal.add(new Tremor());
 		retVal.add(new PotionJunky());
 		retVal.add(new Violation());
+		retVal.add(new Spillage());
 		
 		return retVal;
 	}
