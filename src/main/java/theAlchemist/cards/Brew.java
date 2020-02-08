@@ -22,6 +22,7 @@ public class Brew extends CustomCard
 	public static final String IMG = makeCardPath("Brew.png");
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 	private static final CardRarity RARITY = CardRarity.BASIC;
 	private static final CardTarget TARGET = CardTarget.SELF;
@@ -47,6 +48,7 @@ public class Brew extends CustomCard
 		{
 			AbstractPotion potionToAdd = AbstractDungeon.returnRandomPotion(true);
 			AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(potionToAdd));
+			
 			if(player.hasPower(SpillagePower.POWER_ID))
 				potionToAdd.makeCopy().use(monster); // This might break but hopefully not -Jolkert 2020-02-07
 		}
@@ -59,6 +61,7 @@ public class Brew extends CustomCard
 		{
 			upgradeName();
 			upgradeMagicNumber(UPGRADE_PLUS_POTIONS);
+			this.rawDescription = UPGRADE_DESCRIPTION;
 			initializeDescription();
 		}
 	}

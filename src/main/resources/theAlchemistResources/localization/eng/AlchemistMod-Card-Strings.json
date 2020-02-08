@@ -33,8 +33,8 @@
 	"theAlchemist:Brew":
 	{
 		"NAME": "Brew",
-		"DESCRIPTION": "Brew a Potion.",
-		"UPGRADE_DESCRIPTION": "Brew !M! Potions."
+		"DESCRIPTION": "Obtain a random Potion.",
+		"UPGRADE_DESCRIPTION": "Obtain !M! random Potions."
 	},
 	"theAlchemist:Ignis":
 	{
