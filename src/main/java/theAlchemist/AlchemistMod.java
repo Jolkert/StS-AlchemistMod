@@ -265,7 +265,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 			for (Keyword keyword : keywords)
 			{
 				logger.info("Loading keyword : " + keyword.NAMES[0]);
-				BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
+				BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
 			}
 		
 		logger.info("Keywords loaded!");

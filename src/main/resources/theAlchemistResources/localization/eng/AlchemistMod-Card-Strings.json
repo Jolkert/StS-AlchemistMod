@@ -28,7 +28,7 @@
 	"theAlchemist:LeadToGold":
 	{
 		"NAME": "Lead to Gold",
-		"DESCRIPTION": "Remove target's block, gain gold equal to the amount of block removed times !M!"
+		"DESCRIPTION": "Remove target's Block. Gain gold equal to !M! times the amount of Block removed."
 	},
 	"theAlchemist:Brew":
 	{
@@ -39,43 +39,43 @@
 	"theAlchemist:Ignis":
 	{
 		"NAME": "Ignis",
-		"DESCRIPTION": "Deal !D! damage. NL Exhaust."
+		"DESCRIPTION": "Basic_Element. NL Deal !D! damage. NL Exhaust."
 
 	},
 	"theAlchemist:Aer":
 	{
 		"NAME": "Aer",
-		"DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was an Element, gain [E] . NL Exhaust."
+		"DESCRIPTION": "Basic_Element. NL Deal !D! damage. NL If the last card played this combat was an Element, gain [E] . NL Exhaust."
 	},
 	"theAlchemist:Terra":
 	{
 		"NAME": "Terra",
-		"DESCRIPTION": "Gain !B! Block. NL Exhaust."
+		"DESCRIPTION": "Basic_Element. NL Gain !B! Block. NL Exhaust."
 	},
 	"theAlchemist:Aqua":
 	{
 		"NAME": "Aqua",
-		"DESCRIPTION": "Heal !M! Health and gain 2 Regeneration. NL Exhaust."
+		"DESCRIPTION": "Basic_Element. NL Heal !M! Health and gain 2 Regeneration. NL Exhaust."
 	},
 	"theAlchemist:Glacies":
 	{
 		"NAME": "Glacies",
-		"DESCRIPTION": "Gain !B! Block and !M! Dexterity. NL Exhaust."
+		"DESCRIPTION": "Stage_1_Element. NL Gain !B! Block and !M! Dexterity. NL Exhaust."
 	},
 	"theAlchemist:Fulgur":
 	{
 		"NAME": "Fulgur",
-		"DESCRIPTION": "Deal !D! Damage to all enemies"
+		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage to all enemies"
 	},
-	"theAlchemist:Natruae":
+	"theAlchemist:Naturae":
 	{
 		"NAME": "Naturae",
-		"DESCRIPTION": "Heal !M! Health and gain 3 Vitality"
+		"DESCRIPTION": "Stage_1_Element. NL Heal !M! Health and gain 3 Vitality"
 	},
 	"theAlchemist:Tremor":
 	{
 		"NAME": "Tremor",
-		"DESCRIPTION": "Deal !D! Damage and apply 2 Vulnerable to ALL enemies."
+		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage and apply 2 Vulnerable to ALL enemies."
 	},
 	"theAlchemist:PotionJunky":
 	{

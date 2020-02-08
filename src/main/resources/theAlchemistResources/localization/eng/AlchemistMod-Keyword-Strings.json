@@ -1,33 +1,40 @@
 [
 	{
+		"PROPER_NAME": "Basic Element",
 		"NAMES":
 		[
+			"Basic Element",
 			"basic_element",
 			"basic_elements"
 		],
 		"DESCRIPTION": "Can be combined with the last Basic Element played this combat to add a Stage 1 Element to your draw pile."
 	},
 	{
+		"PROPER_NAME": "Stage 1 Element",
 		"NAMES":
 		[
+			"Stage 1 Element",
 			"stage_1_element",
 			"stage_1_elements"
 		],
 		"DESCRIPTION": "Can be combined with the last Stage 1 Element played this combat to add a Stage 2 Element to your draw pile. Add its component basic elements into the discard on use."
 	},
 	{
+		"PROPER_NAME": "Stage 2 Element",
 		"NAMES":
 		[
+			"Stage 2 Element",
 			"stage_2_element",
 			"stage_2_elements"
 		],
 		"DESCRIPTION": "Add its component basic elements into the discard pile on use"
 	},
 	{
+		"PROPER_NAME": "Vitality",
 		"NAMES":
 		[
-			"Vitality"
+			"vitality"
 		],
-		"DESCRIPTION": "Increases healing done by cards"
+		"DESCRIPTION": "Improves healing done by cards"
 	}
 ]
