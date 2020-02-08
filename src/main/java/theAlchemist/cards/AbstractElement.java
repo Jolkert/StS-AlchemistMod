@@ -3,6 +3,8 @@ package theAlchemist.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -73,6 +75,24 @@ public abstract class AbstractElement extends CustomCard
 				else
 					breakDown(toBreakDown, list);
 			}
+		}
+	}
+	
+	public static AbstractCard returnRandomElement(int maxStage)
+	{
+		int randMax = (maxStage == 2) ? 10 : (maxStage * 2);
+		int randInt = (int)(Math.random() * randMax);
+		switch(randInt)
+		{
+			case 0: return new Aer();
+			case 1: return new Aqua();
+			case 2: return new Ignis();
+			case 3: return new Terra();
+			case 4: return new Fulgur();
+			case 5: return new Glacies();
+			case 6: return new Naturae();
+			case 7: return new Tremor();
+			default: return new Miracle();
 		}
 	}
 }

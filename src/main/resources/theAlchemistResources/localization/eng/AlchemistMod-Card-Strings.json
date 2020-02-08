@@ -104,5 +104,11 @@
 	{
 		"NAME": "Broken Beaker",
 		"DESCRIPTION": "Deal !D! damage. NL Exhaust."
+	},
+	"theAlchemist:NewBeginnings":
+	{
+		"NAME": "New Beginnings",
+		"DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements."
 	}
 }

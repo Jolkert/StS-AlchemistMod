@@ -295,6 +295,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		retVal.add(new Spillage());
 		retVal.add(new BeakerBash());
 		retVal.add(new BrokenBeaker());
+		retVal.add(new NewBeginnings());
 		
 		return retVal;
 	}
