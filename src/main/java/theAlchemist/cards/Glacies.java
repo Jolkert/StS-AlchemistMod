@@ -36,8 +36,8 @@ public class Glacies extends AbstractElement
 	
 	public static final int STAGE = 1;
 	public static final AbstractElement[] CONSTITUENTS = {new Aqua(), new Aer()};
-	public static final AbstractElement[] REACTANTS = null;
-	public static final AbstractElement[] PRODUCTS  = null;
+	public static final AbstractElement[] REACTANTS = {new Tremor()};
+	public static final AbstractElement[] PRODUCTS  = {new Mortem()};
 	
 	public Glacies()
 	{

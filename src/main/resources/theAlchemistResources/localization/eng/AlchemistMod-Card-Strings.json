@@ -77,6 +77,16 @@
 		"NAME": "Tremor",
 		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage and apply 2 Vulnerable to ALL enemies."
 	},
+	"theAlchemist:Mortem":
+	{
+		"NAME": "Mortem",
+		"DESCRIPTION": "Stage_2_Element. NL Deal !D! Damage to a random enemy for each card in the Exhaust pile. NL Exhaust."
+	},
+	"theAlchemist:Vita":
+	{
+		"NAME": "Vita",
+		"DESCRIPTION": "Stage_2_Element. NL Heal !M! HP. Gain 7 Vitality and 3 Regeneration. NL Exhaust."
+	},
 	"theAlchemist:PotionJunky":
 	{
 		"NAME": "Potion Junky",

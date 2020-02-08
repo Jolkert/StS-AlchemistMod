@@ -37,8 +37,8 @@ public class Tremor extends AbstractElement
 	
 	public static final int STAGE = 1;
 	public static final AbstractElement[] CONSTITUENTS = {new Ignis(), new Terra()};
-	public static final AbstractElement[] REACTANTS = null;
-	public static final AbstractElement[] PRODUCTS  = null;
+	public static final AbstractElement[] REACTANTS = {new Glacies()};
+	public static final AbstractElement[] PRODUCTS  = {new Tremor()};
 	
 	public Tremor()
 	{

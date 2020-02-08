@@ -276,26 +276,43 @@ public class AlchemistMod implements EditCardsSubscriber,
 	{
 		ArrayList<AbstractCard> retVal = new ArrayList<AbstractCard>();
 		
-		retVal.add(new Mend());
+		// STARTERS
 		retVal.add(new Strike_Platinum());
+		retVal.add(new Mend());
 		retVal.add(new Brew());
 		
-		retVal.add(new Overheal());
-		retVal.add(new LeadToGold());
-		retVal.add(new Ignis());
+		//ELEMENTS
 		retVal.add(new Aer());
-		retVal.add(new Terra());
 		retVal.add(new Aqua());
+		retVal.add(new Ignis());
+		retVal.add(new Terra());
+		
 		retVal.add(new Fulgur());
 		retVal.add(new Glacies());
 		retVal.add(new Naturae());
 		retVal.add(new Tremor());
-		retVal.add(new PotionJunky());
-		retVal.add(new Violation());
-		retVal.add(new Spillage());
+		
+		retVal.add(new Mortem());
+		retVal.add(new Vita());
+		
+		// COMMONS
 		retVal.add(new BeakerBash());
-		retVal.add(new BrokenBeaker());
+		
+		// UNCOMMONS
+		retVal.add(new LeadToGold());
 		retVal.add(new NewBeginnings());
+		retVal.add(new Violation());
+		
+		retVal.add(new Overheal());
+		retVal.add(new Spillage());
+		
+		// RARES
+		retVal.add(new PotionJunky());
+		
+		// SPECIALS
+		retVal.add(new BrokenBeaker());
+		
+		
 		
 		return retVal;
 	}

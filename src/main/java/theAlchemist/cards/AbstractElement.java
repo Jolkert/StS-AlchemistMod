@@ -54,7 +54,7 @@ public abstract class AbstractElement extends CustomCard
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster monster)
 	{
-		if(!player.hasPower(ElementPower.POWER_ID))
+		if(!player.hasPower(ElementPower.POWER_ID) && this.products != null)
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new ElementPower(player, this)));
 		
 		ArrayList<AbstractElement> basicsToAdd = new ArrayList<AbstractElement>();

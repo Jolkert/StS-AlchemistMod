@@ -57,6 +57,8 @@ public class ElementPower extends AbstractPower
 		if(playedCard.hasTag(AlchemistCardTags.ELEMENT))
 		{
 			AbstractElement playedElement = (AbstractElement)playedCard;
+			if(playedElement.products == null)
+				return;
 			
 			if(!this.element.elementType.equals(playedElement.elementType))
 			{

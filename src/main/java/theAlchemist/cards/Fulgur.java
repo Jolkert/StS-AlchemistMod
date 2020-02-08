@@ -35,8 +35,8 @@ public class Fulgur extends AbstractElement
 	
 	public static final int STAGE = 1;
 	public static final AbstractElement[] CONSTITUENTS = {new Ignis(), new Aer()};
-	public static final AbstractElement[] REACTANTS = null;
-	public static final AbstractElement[] PRODUCTS  = null;
+	public static final AbstractElement[] REACTANTS = {new Naturae()};
+	public static final AbstractElement[] PRODUCTS  = {new Vita()};
 	
 	public Fulgur()
 	{
