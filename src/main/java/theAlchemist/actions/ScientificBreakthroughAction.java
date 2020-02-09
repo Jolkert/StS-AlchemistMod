@@ -17,7 +17,8 @@ public class ScientificBreakthroughAction extends AbstractGameAction
 		this.duration = 0.001F;
 	}
 	
-	public void update() {
+	public void update()
+	{
 		AbstractDungeon.actionManager.addToTop(new WaitAction(0.4F));
 		this.tickDuration();
 		if (this.isDone)
@@ -25,12 +26,14 @@ public class ScientificBreakthroughAction extends AbstractGameAction
 			
 			for(AbstractCard c : DrawCardAction.drawnCards)
 			{
-				if(c.hasTag(AlchemistCardTags.ELEMENT))
+				if(!c.hasTag(AlchemistCardTags.ELEMENT))
 				{
 					AbstractDungeon.player.hand.moveToDiscardPile(c);
 					c.triggerOnManualDiscard();
 					GameActionManager.incrementDiscard(false);
 				}
+				else
+					c.upgrade();
 			}
 		}
 		
