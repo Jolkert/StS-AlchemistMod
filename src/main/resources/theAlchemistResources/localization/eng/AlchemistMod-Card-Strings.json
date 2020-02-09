@@ -126,5 +126,10 @@
 		"NAME": "Transmutation Circle",
 		"DESCRIPTION": "When you draw a Stage_1_Element or Stage_2_Element, upgrade it.",
 		"UPGRADE_DESCRIPTION": "When you draw any Element, upgrade it."
+	},
+	"theAlchemist:ScientificBreakthrough":
+	{
+		"NAME": "Scientific Breakthrough",
+		"DESCRIPTION": "Draw !M! cards. Upgrade any Elements and discard any other cards drawn this way."
 	}
 }

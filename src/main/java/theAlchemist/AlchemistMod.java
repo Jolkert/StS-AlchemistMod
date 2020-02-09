@@ -301,6 +301,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		// UNCOMMONS
 		retVal.add(new LeadToGold());
 		retVal.add(new NewBeginnings());
+		retVal.add(new ScientificBreakthrough());
 		retVal.add(new Violation());
 		
 		retVal.add(new Overheal());
