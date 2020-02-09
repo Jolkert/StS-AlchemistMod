@@ -27,7 +27,7 @@ public class BrokenBeaker extends CustomCard
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final CardColor COLOR = CardColor.COLORLESS;
 	
-	private static final int COST = 1;
+	private static final int COST = 0;
 	private static final int DAMAGE = 4;
 	private static final int UPGRADE_PLUS_DMG = 2; //upgrade
 	
@@ -35,6 +35,7 @@ public class BrokenBeaker extends CustomCard
 	{
 		super(ID, NAME, IMAGE, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		this.baseDamage = DAMAGE;
+		this.exhaust = true;
 	}
 	
 	@Override
