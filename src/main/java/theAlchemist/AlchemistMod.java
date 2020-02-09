@@ -309,6 +309,8 @@ public class AlchemistMod implements EditCardsSubscriber,
 		// RARES
 		retVal.add(new PotionJunky());
 		
+		retVal.add(new TransmutationCircle());
+		
 		// SPECIALS
 		retVal.add(new BrokenBeaker());
 		
