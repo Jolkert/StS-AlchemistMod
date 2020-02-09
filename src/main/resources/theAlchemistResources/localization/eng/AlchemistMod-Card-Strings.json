@@ -120,5 +120,11 @@
 		"NAME": "New Beginnings",
 		"DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements."
+	},
+	"theAlchemist:TransmutationCircle":
+	{
+		"NAME": "Transmutation Circle",
+		"DESCRIPTION": "When you draw a Stage_1_Element or Stage_2_Element, upgrade it.",
+		"UPGRADE_DESCRIPTION": "When you draw any Element, upgrade it."
 	}
 }
