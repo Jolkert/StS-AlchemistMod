@@ -1,34 +1,24 @@
+
 {
+	"theAlchemist:Aer":
+	{
+		"NAME": "Aer",
+		"DESCRIPTION": "Basic_Element. NL Deal !D! damage. NL If the last card played this combat was an Element, gain [E] . NL Exhaust."
+	},
+	"theAlchemist:Aqua":
+	{
+		"NAME": "Aqua",
+		"DESCRIPTION": "Basic_Element. NL Heal !M! Health and gain 2 Regeneration. NL Exhaust."
+	},
 	"theAlchemist:AttackTemplate":
-	{
-	"NAME": "Strike",
-	"DESCRIPTION": "Deal !D! Damage."
-	},
-	"theAlchemist:SkillTemplate":
-	{
-	"NAME": "Defend",
-	"DESCRIPTION": "Gain !B! Block."
-	},
-	"theAlchemist:Mend":
-	{
-		"NAME": "Mend",
-		"DESCRIPTION": "Heal !M! Health."
-	},
-	"theAlchemist:Strike_Platinum":
 	{
 		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! Damage."
 	},
-	"theAlchemist:Overheal":
+	"theAlchemist:BeakerBash":
 	{
-		"NAME": "Overheal",
-		"DESCRIPTION": "Whenever you heal for more than your max HP, gain the difference in Regeneration",
-		"UPGRADE_DESCRIPTION": "Innate. NL "
-	},
-	"theAlchemist:LeadToGold":
-	{
-		"NAME": "Lead to Gold",
-		"DESCRIPTION": "Remove target's Block. Gain gold equal to !M! times the amount of Block removed."
+		"NAME": "Beaker Bash",
+		"DESCRIPTION": "Deal !D! damage and add a Broken Beaker into your hand."
 	},
 	"theAlchemist:Brew":
 	{
@@ -36,112 +26,26 @@
 		"DESCRIPTION": "Obtain a random Potion.",
 		"UPGRADE_DESCRIPTION": "Obtain !M! random Potions."
 	},
-	"theAlchemist:Ignis":
-	{
-		"NAME": "Ignis",
-		"DESCRIPTION": "Basic_Element. NL Deal !D! damage. NL Exhaust."
-
-	},
-	"theAlchemist:Aer":
-	{
-		"NAME": "Aer",
-		"DESCRIPTION": "Basic_Element. NL Deal !D! damage. NL If the last card played this combat was an Element, gain [E] . NL Exhaust."
-	},
-	"theAlchemist:Terra":
-	{
-		"NAME": "Terra",
-		"DESCRIPTION": "Basic_Element. NL Gain !B! Block. NL Exhaust."
-	},
-	"theAlchemist:Aqua":
-	{
-		"NAME": "Aqua",
-		"DESCRIPTION": "Basic_Element. NL Heal !M! Health and gain 2 Regeneration. NL Exhaust."
-	},
-	"theAlchemist:Glacies":
-	{
-		"NAME": "Glacies",
-		"DESCRIPTION": "Stage_1_Element. NL Gain !B! Block and !M! Dexterity. NL Exhaust."
-	},
-	"theAlchemist:Fulgur":
-	{
-		"NAME": "Fulgur",
-		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage to all enemies"
-	},
-	"theAlchemist:Naturae":
-	{
-		"NAME": "Naturae",
-		"DESCRIPTION": "Stage_1_Element. NL Heal !M! Health and gain 3 Vitality"
-	},
-	"theAlchemist:Tremor":
-	{
-		"NAME": "Tremor",
-		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage and apply 2 Vulnerable to ALL enemies."
-	},
-	"theAlchemist:Mortem":
-	{
-		"NAME": "Mortem",
-		"DESCRIPTION": "Stage_2_Element. NL Deal !D! Damage to a random enemy for each card in the Exhaust pile. NL Exhaust."
-	},
-	"theAlchemist:Vita":
-	{
-		"NAME": "Vita",
-		"DESCRIPTION": "Stage_2_Element. NL Heal !M! HP. Gain 7 Vitality and 3 Regeneration. NL Exhaust."
-	},
-	"theAlchemist:PotionJunky":
-	{
-		"NAME": "Potion Junky",
-		"DESCRIPTION": "Deal Damage equivalent to the amount of buffs you currently have.",
-		"UPGRADE_DESCRIPTION": "NL Increase all buffs by 1 stage."
-	},
-	"theAlchemist:Violation":
-	{
-		"NAME": "Violation",
-		"DESCRIPTION": "Draw a card from your Exhaust pile. Deal 4 damage to self.",
-		"UPGRADE_DESCRIPTION": "Draw 2 cards from your Exhaust pile. Deal 4 damage to self."
-	},
-	"theAlchemist:Spillage":
-	{
-		"NAME": "Spillage",
-		"DESCRIPTION": "Whenever you gain a potion, use its ability",
-		"UPGRADE_DESCRIPTION": "Whenever you gain a potion, use its ability"
-	},
-	"theAlchemist:BeakerBash":
-	{
-		"NAME": "Beaker Bash",
-		"DESCRIPTION": "Deal !D! damage and add a Broken Beaker into your hand."
-	},
 	"theAlchemist:BrokenBeaker":
 	{
 		"NAME": "Broken Beaker",
 		"DESCRIPTION": "Deal !D! damage. NL Exhaust."
 	},
-	"theAlchemist:NewBeginnings":
+	"theAlchemist:BunsenBurner":
 	{
-		"NAME": "New Beginnings",
-		"DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements."
+		"NAME": "Bunsen Burner",
+		"DESCRIPTION": "Deal !D! damage to all enemies and add a Burn to your discard pile."
 	},
-	"theAlchemist:TransmutationCircle":
+	"theAlchemist:Dissolution":
 	{
-		"NAME": "Transmutation Circle",
-		"DESCRIPTION": "When you draw a Stage_1_Element or Stage_2_Element, upgrade it.",
-		"UPGRADE_DESCRIPTION": "When you draw any Element, upgrade it."
+		"NAME": "Dissolution",
+		"DESCRIPTION": "Deal !D!. If the target has block, multiply the damage by !M!."
 	},
-	"theAlchemist:ScientificBreakthrough":
+	"theAlchemist:EclipseShot":
 	{
-		"NAME": "Scientific Breakthrough",
-		"DESCRIPTION": "Draw !M! cards. Upgrade any Elements and discard any other cards drawn this way."
-	},
-	"theAlchemist:SolForm":
-	{
-		"NAME": "Sol Form",
-		"DESCRIPTION": "Ethereal. NL When you draw an Element, reduce its cost by 1",
-		"UPGRADE_DESCRIPTION": "When you draw an Element, reduce its cost by 1."
-	},
-	"theAlchemist:PotionBarrage":
-	{
-		"NAME": "Potion Barrage",
-		"DESCRIPTION": "Deal !D! damage for each Potion you have."
+		"NAME": "Eclipse Shot",
+		"DESCRIPTION": "Deal !D! damage and add a random Basic_Element to your hand.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and add !M! random Basic_Elements to your hand."
 	},
 	"theAlchemist:Epiphany":
 	{
@@ -149,25 +53,121 @@
 		"DESCRIPTION": "Add a random Skill to your hand",
 		"UPGRADE_DESCRIPTION": "Add !M! random Skills to your hand"
 	},
-	"theAlchemist:Dissolution":
+	"theAlchemist:Fulgur":
 	{
-		"NAME": "Dissolution",
-		"DESCRIPTION": "Deal !D!. If the target has block, multiply the damage by !M!."
+		"NAME": "Fulgur",
+		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage to all enemies"
 	},
-	"theAlchemist:BunsenBurner":
+	"theAlchemist:Glacies":
 	{
-		"NAME": "Bunsen Burner",
-		"DESCRIPTION": "Deal !D! damage to all enemies and add a Burn to your discard pile."
+		"NAME": "Glacies",
+		"DESCRIPTION": "Stage_1_Element. NL Gain !B! Block and !M! Dexterity. NL Exhaust."
 	},
 	"theAlchemist:HeavyBolt":
 	{
 		"NAME": "Heavy Bolt",
 		"DESCRIPTION": "Deal !D! damage and apply !M! vulnerable to the target."
 	},
-	"theAlchemist:EclipseShot":
+	"theAlchemist:Ignis":
 	{
-		"NAME": "Eclipse Shot",
-		"DESCRIPTION": "Deal !D! damage and add a random Basic_Element to your hand.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage and add !M! random Basic_Elements to your hand."
+		"NAME": "Ignis",
+		"DESCRIPTION": "Basic_Element. NL Deal !D! damage. NL Exhaust."
+	},
+	"theAlchemist:LeadToGold":
+	{
+		"NAME": "Lead to Gold",
+		"DESCRIPTION": "Remove target's Block. Gain gold equal to !M! times the amount of Block removed."
+	},
+	"theAlchemist:Mend":
+	{
+		"NAME": "Mend",
+		"DESCRIPTION": "Heal !M! Health."
+	},
+	"theAlchemist:Mortem":
+	{
+		"NAME": "Mortem",
+		"DESCRIPTION": "Stage_2_Element. NL Deal !D! Damage to a random enemy for each card in the Exhaust pile. NL Exhaust."
+	},
+	"theAlchemist:Naturae":
+	{
+		"NAME": "Naturae",
+		"DESCRIPTION": "Stage_1_Element. NL Heal !M! Health and gain 3 Vitality"
+	},
+	"theAlchemist:NewBeginnings":
+	{
+		"NAME": "New Beginnings",
+		"DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Exhaust all Curse and Status cards in your hand. Replace them with random Basic_Elements."
+	},
+	"theAlchemist:Overheal":
+	{
+		"NAME": "Overheal",
+		"DESCRIPTION": "Whenever you heal for more than your max HP, gain the difference in Regeneration",
+		"UPGRADE_DESCRIPTION": "Innate. NL "
+	},
+	"theAlchemist:PotionBarrage":
+	{
+		"NAME": "Potion Barrage",
+		"DESCRIPTION": "Deal !D! damage for each Potion you have."
+	},
+	"theAlchemist:PotionJunky":
+	{
+		"NAME": "Potion Junky",
+		"DESCRIPTION": "Deal Damage equivalent to the amount of buffs you currently have.",
+		"UPGRADE_DESCRIPTION": "NL Increase all buffs by 1 stage."
+	},
+	"theAlchemist:ScientificBreakthrough":
+	{
+		"NAME": "Scientific Breakthrough",
+		"DESCRIPTION": "Draw !M! cards. Upgrade any Elements and discard any other cards drawn this way."
+	},
+	"theAlchemist:SkillTemplate":
+	{
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! Block."
+	},
+	"theAlchemist:SolForm":
+	{
+		"NAME": "Sol Form",
+		"DESCRIPTION": "Ethereal. NL When you draw an Element, reduce its cost by 1",
+		"UPGRADE_DESCRIPTION": "When you draw an Element, reduce its cost by 1."
+	},
+	"theAlchemist:Spillage":
+	{
+		"NAME": "Spillage",
+		"DESCRIPTION": "Whenever you gain a potion, use its ability",
+		"UPGRADE_DESCRIPTION": "Whenever you gain a potion, use its ability"
+	},
+	"theAlchemist:Strike_Platinum":
+	{
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! Damage."
+	},
+	"theAlchemist:Terra":
+	{
+		"NAME": "Terra",
+		"DESCRIPTION": "Basic_Element. NL Gain !B! Block. NL Exhaust."
+	},
+	"theAlchemist:TransmutationCircle":
+	{
+		"NAME": "Transmutation Circle",
+		"DESCRIPTION": "When you draw a Stage_1_Element or Stage_2_Element, upgrade it.",
+		"UPGRADE_DESCRIPTION": "When you draw any Element, upgrade it."
+	},
+	"theAlchemist:Tremor":
+	{
+		"NAME": "Tremor",
+		"DESCRIPTION": "Stage_1_Element. NL Deal !D! Damage and apply 2 Vulnerable to ALL enemies."
+	},
+	"theAlchemist:Violation":
+	{
+		"NAME": "Violation",
+		"DESCRIPTION": "Draw a card from your Exhaust pile. Deal 4 damage to self.",
+		"UPGRADE_DESCRIPTION": "Draw 2 cards from your Exhaust pile. Deal 4 damage to self."
+	},
+	"theAlchemist:Vita":
+	{
+		"NAME": "Vita",
+		"DESCRIPTION": "Stage_2_Element. NL Heal !M! HP. Gain 7 Vitality and 3 Regeneration. NL Exhaust."
 	}
 }

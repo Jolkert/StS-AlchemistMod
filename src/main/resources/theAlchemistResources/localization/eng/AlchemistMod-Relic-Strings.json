@@ -3,9 +3,6 @@
 	{
 		"NAME": "Cursed Alembic",
 		"FLAVOR": "You feel a strange energy coming from this alembic",
-		"DESCRIPTIONS":
-		[
-			"You can now #yAlchemize at Rest Sites"
-		]
+		"DESCRIPTIONS": ["You can now #yAlchemize at Rest Sites"]
 	}
 }

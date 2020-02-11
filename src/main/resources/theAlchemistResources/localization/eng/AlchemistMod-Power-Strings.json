@@ -1,35 +1,24 @@
+
 {
+	"theAlchemist:ElementPower":
+	{
+		"NAME": "Element",
+		"DESCRIPTIONS": ["This is a temporary description YEEHAW."]
+	},
 	"theAlchemist:OverhealPower":
 	{
 		"NAME": "Overheal",
 		"DESCRIPTIONS": ["Whenever you heal for more than your max HP, gain the difference in Regeneration."]
 	},
-	"theAlchemist:VitalityPower":
+	"theAlchemist:SolFormPower":
 	{
-		"NAME": "Vitality",
-		"DESCRIPTIONS":
-		[
-			"Increases ",
-			"Decreases ",
-			"Healing done by cards by #b",
-			"."
-		]
-	},
-	"theAlchemist:ElementPower":
-	{
-		"NAME": "Element",
-		"DESCRIPTIONS":
-		[
-			"This is a temporary description YEEHAW."
-		]
+		"NAME": "Sol Form",
+		"DESCRIPTIONS": ["When you draw an Element, reduce its cost by 1."]
 	},
 	"theAlchemist:SpillagePower":
 	{
 		"NAME": "Spillage",
-		"DESCRIPTIONS":
-		[
-			"Whenever you gain a potion, use its ability"
-		]
+		"DESCRIPTIONS": ["Whenever you gain a potion, use its ability"]
 	},
 	"theAlchemist:TransmutationCirclePower":
 	{
@@ -40,12 +29,15 @@
 			"When you draw any Element, upgrade it."
 		]
 	},
-	"theAlchemist:SolFormPower":
+	"theAlchemist:VitalityPower":
 	{
-		"NAME": "Sol Form",
+		"NAME": "Vitality",
 		"DESCRIPTIONS":
 		[
-			"When you draw an Element, reduce its cost by 1."
+			"Increases ",
+			"Decreases ",
+			"Healing done by cards by #b",
+			"."
 		]
 	}
 }
