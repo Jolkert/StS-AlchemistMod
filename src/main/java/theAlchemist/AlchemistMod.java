@@ -297,6 +297,13 @@ public class AlchemistMod implements EditCardsSubscriber,
 		
 		// COMMONS
 		retVal.add(new BeakerBash());
+		retVal.add(new BunsenBurner());
+		retVal.add(new Dissolution());
+		retVal.add(new EclipseShot());
+		retVal.add(new HeavyBolt());
+		retVal.add(new PotionBarrage());
+		
+		retVal.add(new Epiphany());
 		
 		// UNCOMMONS
 		retVal.add(new LeadToGold());
@@ -310,6 +317,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 		// RARES
 		retVal.add(new PotionJunky());
 		
+		retVal.add(new SolForm());
 		retVal.add(new TransmutationCircle());
 		
 		// SPECIALS

@@ -131,5 +131,43 @@
 	{
 		"NAME": "Scientific Breakthrough",
 		"DESCRIPTION": "Draw !M! cards. Upgrade any Elements and discard any other cards drawn this way."
+	},
+	"theAlchemist:SolForm":
+	{
+		"NAME": "Sol Form",
+		"DESCRIPTION": "Ethereal. NL When you draw an Element, reduce its cost by 1",
+		"UPGRADE_DESCRIPTION": "When you draw an Element, reduce its cost by 1."
+	},
+	"theAlchemist:PotionBarrage":
+	{
+		"NAME": "Potion Barrage",
+		"DESCRIPTION": "Deal !D! damage for each Potion you have."
+	},
+	"theAlchemist:Epiphany":
+	{
+		"NAME": "Epiphany",
+		"DESCRIPTION": "Add a random Skill to your hand",
+		"UPGRADE_DESCRIPTION": "Add !M! random Skills to your hand"
+	},
+	"theAlchemist:Dissolution":
+	{
+		"NAME": "Dissolution",
+		"DESCRIPTION": "Deal !D!. If the target has block, multiply the damage by !M!."
+	},
+	"theAlchemist:BunsenBurner":
+	{
+		"NAME": "Bunsen Burner",
+		"DESCRIPTION": "Deal !D! damage to all enemies and add a Burn to your discard pile."
+	},
+	"theAlchemist:HeavyBolt":
+	{
+		"NAME": "Heavy Bolt",
+		"DESCRIPTION": "Deal !D! damage and apply !M! vulnerable to the target."
+	},
+	"theAlchemist:EclipseShot":
+	{
+		"NAME": "Eclipse Shot",
+		"DESCRIPTION": "Deal !D! damage and add a random Basic_Element to your hand.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and add !M! random Basic_Elements to your hand."
 	}
 }

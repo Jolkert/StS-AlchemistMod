@@ -30,5 +30,22 @@
 		[
 			"Whenever you gain a potion, use its ability"
 		]
+	},
+	"theAlchemist:TransmutationCirclePower":
+	{
+		"NAME": "Transmutation Circle",
+		"DESCRIPTIONS":
+		[
+			"When you draw a Stage_1_Element or Stage_2_Element, upgrade it.",
+			"When you draw any Element, upgrade it."
+		]
+	},
+	"theAlchemist:SolFormPower":
+	{
+		"NAME": "Sol Form",
+		"DESCRIPTIONS":
+		[
+			"When you draw an Element, reduce its cost by 1."
+		]
 	}
 }

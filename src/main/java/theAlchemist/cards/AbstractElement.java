@@ -80,8 +80,8 @@ public abstract class AbstractElement extends CustomCard
 	
 	public static AbstractCard returnRandomElement(int maxStage)
 	{
-		int randMax = (maxStage == 2) ? 10 : (maxStage * 2);
-		int randInt = (int)(Math.random() * randMax);
+		int randMax = (maxStage == 2) ? 10 : ((maxStage + 1) * 2);
+		int randInt = (int)(Math.random()) * randMax;
 		switch(randInt)
 		{
 			case 0: return new Aer();
@@ -92,6 +92,8 @@ public abstract class AbstractElement extends CustomCard
 			case 5: return new Glacies();
 			case 6: return new Naturae();
 			case 7: return new Tremor();
+			case 8: return new Mortem();
+			case 9: return new Vita();
 			default: return new Miracle();
 		}
 	}
