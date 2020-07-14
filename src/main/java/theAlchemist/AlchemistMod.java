@@ -42,6 +42,7 @@ public class AlchemistMod implements EditCardsSubscriber,
 									 PostInitializeSubscriber
 {
 	//Nate's gay
+	//and brian too
 	public static final Logger logger = LogManager.getLogger(AlchemistMod.class.getName());
 	private static String modID;
 	
